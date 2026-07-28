@@ -195,7 +195,7 @@ function initHeroSlider() {
   }
 
   function triggerSlideTextReveal(slideElement) {
-    const typewriter = slideElement.querySelector('.highlight-typewriter');
+    const typewriter = document.querySelector('.hero-slider .highlight-typewriter');
     if (typewriter) {
       typewriterEffect(typewriter);
     }

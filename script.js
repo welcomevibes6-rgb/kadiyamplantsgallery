@@ -118,6 +118,24 @@ function initHeroSlider() {
 
   const dots = dotsContainer ? dotsContainer.querySelectorAll('.dot') : [];
 
+  // 2b. Navigation Arrow Listeners
+  const prevBtn = slider.querySelector('.prev-arrow');
+  const nextBtn = slider.querySelector('.next-arrow');
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      const prevIdx = (currentIdx - 1 + slides.length) % slides.length;
+      jumpToSlide(prevIdx);
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      const nextIdx = (currentIdx + 1) % slides.length;
+      jumpToSlide(nextIdx);
+    });
+  }
+
   // 2b. Transition logic
   function changeSlide(nextIdx) {
     const currSlide = slides[currentIdx];

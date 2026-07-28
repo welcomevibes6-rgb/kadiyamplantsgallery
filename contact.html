@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with Kadiyam Plants Gallery. Submit an enquiry about plant supply or landscaping, or locate our nursery yards in Kadiapulanka, Andhra Pradesh.">
+  <title>Contact Us | Kadiyam Plants Gallery</title>
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Local Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Social Actions -->
+  <div class="floating-actions">
+    <a href="https://wa.me/917207755335" target="_blank" class="float-btn whatsapp" aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="tel:7207755335" class="float-btn phone" aria-label="Call Us">
+      <i class="fas fa-phone-alt"></i>
+    </a>
+    <a href="https://www.instagram.com/kadiyam_plants_gallery" target="_blank" class="float-btn instagram" aria-label="Follow on Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+
+  <!-- Top Contact Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-contact">
+        <a href="mailto:kadiyamplantsgallery@gmail.com"><i class="fas fa-envelope"></i> kadiyamplantsgallery@gmail.com</a>
+        <a href="tel:7207755335"><i class="fas fa-phone-alt"></i> 7207755335</a>
+        <a href="https://wa.me/917207755335" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+      </div>
+      <div class="top-bar-socials">
+        <a href="https://www.instagram.com/kadiyam_plants_gallery" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://share.google/ORdUQ8QDstT3n8Wep" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo-container">
+        <img src="images/logo.png" alt="Kadiyam Plants Gallery Tree Logo" class="logo-img">
+        <div class="brand-name">
+          Kadiyam Plants Gallery
+          <span>Nursery & Landscaping</span>
+        </div>
+      </a>
+      
+      <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      
+      <ul class="nav-links" id="navLinks">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="nav-item">
+          <a href="varieties.html" class="nav-link">Plant Varieties <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item"><a href="varieties.html?category=outdoor">Outdoor Plants</a></li>
+            <li class="dropdown-item"><a href="varieties.html?category=flowering">Flowering Plants</a></li>
+            <li class="dropdown-item"><a href="varieties.html?category=ficus">Ficus Plants</a></li>
+            <li class="dropdown-item"><a href="varieties.html?category=fruit">Fruit Plants</a></li>
+            <li class="dropdown-item"><a href="varieties.html?category=avenue">Avenue Plants</a></li>
+            <li class="dropdown-item"><a href="varieties.html?category=border">Border Plants</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="landscaping.html" class="nav-link">Landscaping Services</a></li>
+        <li class="nav-item">
+          <a href="gallery.html" class="nav-link">Gallery <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item"><a href="gallery.html?tab=photos">Photos</a></li>
+            <li class="dropdown-item"><a href="gallery.html?tab=videos">Videos</a></li>
+            <li class="dropdown-item"><a href="gallery.html?tab=loading">Loading Plants</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="contact.html" class="nav-link active">Contact Us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Subpage Hero Band -->
+  <section class="subpage-hero" style="background-image: linear-gradient(rgba(13, 44, 29, 0.75), rgba(13, 44, 29, 0.75)), url('images/121.png');">
+    <h1 class="subpage-hero-title letter-reveal">Contact Details</h1>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section class="section-padding" style="background-color: var(--color-cream);">
+    <div class="container">
+      
+      <div class="contact-layout">
+        <!-- Left: Google Map embed centered on Kadiyam -->
+        <div class="map-container reveal reveal-left">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15264.44498305018!2d81.86877967885449!3d16.92080345091729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37a13d710f63b5%3A0xe543dfa7eb20c15d!2sKadiapulanka%2C%20Andhra%20Pradesh%20533126!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <!-- Right: Enquiry Form Card -->
+        <div class="enquiry-form-card reveal reveal-right">
+          <h3>Nursery Enquiry Form</h3>
+          
+          <!-- Note: Form is configured client-side only. A real backend/form service like Formspree would be needed for direct email delivery. -->
+          <form id="enquiryForm" action="#">
+            <div class="form-group">
+              <label for="formName" class="form-label">Full Name *</label>
+              <input type="text" id="formName" class="form-input" placeholder="Enter your full name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="formPhone" class="form-label">Phone / WhatsApp Number *</label>
+              <input type="tel" id="formPhone" class="form-input" placeholder="e.g. 7207755335" required>
+            </div>
+
+            <div class="form-group">
+              <label for="formEmail" class="form-label">Email Address</label>
+              <input type="email" id="formEmail" class="form-input" placeholder="e.g. name@example.com">
+            </div>
+
+            <div class="form-group">
+              <label for="formSubject" class="form-label">Enquiry Topic</label>
+              <select id="formSubject" class="form-input" style="appearance: auto;">
+                <option value="General Plants Supply">General Plants Supply</option>
+                <option value="Landscape Gardening Design">Landscape Gardening Design</option>
+                <option value="Bulk Avenue Trees Order">Bulk Avenue Trees Order</option>
+                <option value="Home Terrace Garden Setups">Home Terrace Garden Setups</option>
+                <option value="Other Nursery Enquiries">Other Nursery Enquiries</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="formMessage" class="form-label">Tell us about your requirement</label>
+              <textarea id="formMessage" class="form-input" rows="4" placeholder="Mention the plant species, quantities, or landscaping area dimensions..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: var(--radius-sm);">Submit Enquiry</button>
+          </form>
+
+          <!-- Form feedback overlay -->
+          <div class="form-feedback" id="formFeedback"></div>
+        </div>
+      </div>
+
+      <!-- Quick Contact Info Cards below Map/Form -->
+      <div class="contact-meta-list reveal reveal-fade" style="margin-top: 50px;">
+        <!-- Card 1: Phone & WhatsApp -->
+        <div class="contact-meta-card">
+          <div class="contact-meta-icon"><i class="fas fa-phone-alt"></i></div>
+          <div class="contact-meta-info">
+            <h4>Phone & WhatsApp</h4>
+            <p>Direct Call: <a href="tel:7207755335">7207755335</a></p>
+            <p>WhatsApp: <a href="https://wa.me/917207755335" target="_blank">Chat with us</a></p>
+          </div>
+        </div>
+
+        <!-- Card 2: Email Address -->
+        <div class="contact-meta-card">
+          <div class="contact-meta-icon"><i class="fas fa-envelope"></i></div>
+          <div class="contact-meta-info">
+            <h4>Email Enquiry</h4>
+            <p><a href="mailto:kadiyamplantsgallery@gmail.com">kadiyamplantsgallery@gmail.com</a></p>
+            <p>Write to us for pricing lists.</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Nursery Location -->
+        <div class="contact-meta-card">
+          <div class="contact-meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="contact-meta-info">
+            <h4>Visit Our Yards</h4>
+            <p>Kadiapulanka, Kadiyam Mandal,</p>
+            <p>Andhra Pradesh, India. <a href="https://share.google/ORdUQ8QDstT3n8Wep" target="_blank" style="color: var(--color-gold); font-weight: 600;">Open Map <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i></a></p>
+          </div>
+        </div>
+
+        <!-- Card 4: Instagram Portfolio -->
+        <div class="contact-meta-card">
+          <div class="contact-meta-icon"><i class="fab fa-instagram"></i></div>
+          <div class="contact-meta-info">
+            <h4>Instagram Profile</h4>
+            <p><a href="https://www.instagram.com/kadiyam_plants_gallery" target="_blank">@kadiyam_plants_gallery</a></p>
+            <p>Follow our daily catalog posts.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- About Column -->
+        <div class="footer-about">
+          <div class="footer-logo">
+            <img src="images/123.png" alt="Kadiyam Plants Gallery Logo" class="logo-img" style="height: 40px; border-radius: 6px;">
+            <div class="brand-name">
+              Kadiyam Plants Gallery
+              <span style="color: #7d9e8c;">Premium Nursery</span>
+            </div>
+          </div>
+          <p>Cultivating native and ornamental beauty for over 10 years in Kadiyam, Andhra Pradesh. We specialize in home gardening setups and grand landscaping projects.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/kadiyam_plants_gallery" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/917207755335" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="tel:7207755335" aria-label="Phone"><i class="fas fa-phone-alt"></i></a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="footer-links-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="landscaping.html"><i class="fas fa-chevron-right"></i> Landscaping</a></li>
+            <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Media Gallery</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Plant Catalog Quick Links -->
+        <div class="footer-links-col">
+          <h3>Categories</h3>
+          <ul class="footer-links">
+            <li><a href="varieties.html?category=outdoor"><i class="fas fa-chevron-right"></i> Outdoor Plants</a></li>
+            <li><a href="varieties.html?category=flowering"><i class="fas fa-chevron-right"></i> Flowering Plants</a></li>
+            <li><a href="varieties.html?category=ficus"><i class="fas fa-chevron-right"></i> Ficus Plants</a></li>
+            <li><a href="varieties.html?category=fruit"><i class="fas fa-chevron-right"></i> Fruit Trees</a></li>
+            <li><a href="varieties.html?category=avenue"><i class="fas fa-chevron-right"></i> Avenue Trees</a></li>
+          </ul>
+        </div>
+        
+        <!-- Address & Contacts -->
+        <div class="footer-links-col">
+          <h3>Nursery Location</h3>
+          <ul class="footer-contact-info">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Kadiapulanka, Kadiyam Mandal,<br>Andhra Pradesh, India</span>
+            </li>
+            <li>
+              <i class="fas fa-phone-alt"></i>
+              <a href="tel:7207755335">7207755335</a>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:kadiyamplantsgallery@gmail.com">kadiyamplantsgallery@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Kadiyam Plants Gallery. All Rights Reserved.</p>
+        <p>Crafted for botanical excellence.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla Script File -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -142,6 +142,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 galleryPanels.forEach(panel => {
                     if (panel.id === targetTab) {
                         panel.classList.add('active');
+                        // Re-observe animations for newly visible panel
+                        panel.querySelectorAll('.anim-up, .anim-left, .anim-right, .anim-split').forEach(el => {
+                            if (!el.classList.contains('visible')) {
+                                observer.observe(el);
+                            }
+                        });
                     } else {
                         panel.classList.remove('active');
                     }

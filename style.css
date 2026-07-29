@@ -206,7 +206,7 @@ img { max-width: 100%; display: block; }
 }
 .hero-slide.active .hero-img { transform: scale(1.02); }
 
-/* Hero Text Animation */
+/* Hero Text Animation & CTA Buttons */
 .hero-content {
     position: absolute; top: 50%; left: 0; transform: translateY(-50%);
     width: 100%; z-index: 10; pointer-events: none;
@@ -231,6 +231,55 @@ img { max-width: 100%; display: block; }
     font-family: 'Poppins', sans-serif; font-size: 3.8rem;
     font-weight: 700; color: var(--white); line-height: 1.2;
     text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.hero-btn-group {
+    display: flex; gap: 14px; flex-wrap: wrap; margin-top: 24px;
+    pointer-events: auto;
+}
+.btn-hero {
+    display: inline-flex; align-items: center; gap: 9px;
+    padding: 13px 28px; border-radius: 50px;
+    font-family: 'Poppins', sans-serif; font-size: 0.92rem; font-weight: 600;
+    cursor: pointer; transition: var(--transition);
+    text-decoration: none; border: none;
+}
+.btn-hero-primary {
+    background: linear-gradient(135deg, var(--green-500), var(--green-700));
+    color: var(--white); box-shadow: 0 4px 18px rgba(22, 163, 74, 0.35);
+}
+.btn-hero-primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(22, 163, 74, 0.5);
+}
+.btn-hero-outline {
+    background: rgba(255,255,255,0.15); color: var(--white);
+    border: 2px solid rgba(255,255,255,0.8); backdrop-filter: blur(8px);
+}
+.btn-hero-outline:hover {
+    background: var(--white); color: var(--green-800);
+    transform: translateY(-3px) scale(1.02);
+}
+.btn-hero-instagram {
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    color: var(--white); box-shadow: 0 4px 18px rgba(253, 29, 29, 0.35);
+}
+.btn-hero-instagram:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 28px rgba(253, 29, 29, 0.55);
+}
+
+.hero-insta-note {
+    margin-top: 14px; font-size: 0.9rem; color: rgba(255,255,255,0.95);
+    font-weight: 500; text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    pointer-events: auto;
+}
+.insta-pulse-text {
+    display: inline-block; animation: gentlePulse 3s infinite ease-in-out;
+}
+@keyframes gentlePulse {
+    0%, 100% { opacity: 0.85; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.03); color: #86efac; }
 }
 
 .hero-dots {
@@ -319,7 +368,7 @@ img { max-width: 100%; display: block; }
 }
 .split-panel:hover img { transform: scale(1.05); }
 
-/* ===== CATEGORY FILTER BAR (PILL BUTTONS) ===== */
+/* ===== CATEGORY FILTER BAR (PILL BUTTONS WITH ICONS) ===== */
 .category-filter-bar {
     background: var(--white); position: sticky; top: 68px; z-index: 99;
     box-shadow: var(--shadow-sm); border-bottom: 1px solid var(--gray-100);
@@ -329,16 +378,23 @@ img { max-width: 100%; display: block; }
     display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;
 }
 .filter-pill {
-    padding: 10px 24px; border-radius: 50px;
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 22px; border-radius: 50px;
     font-size: 0.88rem; font-weight: 600; font-family: 'Poppins', sans-serif;
     color: var(--green-700); background: var(--white);
     border: 2px solid var(--green-600); cursor: pointer;
     transition: var(--transition); box-shadow: var(--shadow-sm);
     white-space: nowrap;
 }
+.filter-pill .pill-icon {
+    font-size: 1.1rem; display: inline-block; transition: transform 0.3s ease;
+}
 .filter-pill:hover {
     background: var(--green-50); transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(22,163,74,0.18);
+}
+.filter-pill:hover .pill-icon, .filter-pill.active .pill-icon {
+    transform: scale(1.25);
 }
 .filter-pill.active {
     background: var(--green-600); color: var(--white);
@@ -972,6 +1028,8 @@ img { max-width: 100%; display: block; }
     .page-hero { height: 220px; }
     .page-hero-overlay h1 { font-size: 2rem; }
     .service-desc-list { grid-template-columns: 1fr; }
+    .hero-btn-group { flex-direction: column; width: 100%; }
+    .btn-hero { width: 100%; justify-content: center; }
 }
 
 @media (max-width: 480px) {

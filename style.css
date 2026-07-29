@@ -962,6 +962,69 @@ img { max-width: 100%; display: block; }
 }
 .form-feedback.show { display: block; }
 
+/* ===== CORE SCROLL ENTRANCE ANIMATIONS ===== */
+.anim-up { opacity: 0; transform: translateY(35px); transition: all 0.65s ease; }
+.anim-left { opacity: 0; transform: translateX(-35px); transition: all 0.65s ease; }
+.anim-right { opacity: 0; transform: translateX(35px); transition: all 0.65s ease; }
+.anim-split {
+    opacity: 0; transform: translateY(30px) scale(0.95);
+    transition: all 0.7s cubic-bezier(0.4,0,0.2,1);
+    transition-delay: var(--split-delay, 0s);
+}
+.anim-up.visible, .anim-left.visible, .anim-right.visible, .anim-split.visible {
+    opacity: 1; transform: translate(0) scale(1);
+}
+
+/* ===== LETTER REVEAL ANIMATION (Varieties page heading) ===== */
+.letter-reveal span {
+    display: inline-block; opacity: 0; transform: translateY(12px);
+    transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1), transform 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+.letter-reveal.animated span {
+    opacity: 1; transform: translateY(0);
+}
+
+/* ===== ABOUT HEADING LETTER REVEAL (Cinematic, Left-to-Right) ===== */
+.about-heading-reveal {
+    overflow: hidden;
+}
+.about-heading-reveal span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+.about-heading-reveal.animated span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== ABOUT CONTENT FADE-IN (Delayed after heading) ===== */
+.about-content-reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.about-content-reveal.content-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== ABOUT IMAGE PREMIUM (Subtle fade + hover zoom) ===== */
+.about-image-premium {
+    overflow: hidden;
+}
+.about-image-premium img {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.about-image-premium:hover img {
+    transform: scale(1.02);
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
     .variety-grid { grid-template-columns: repeat(3, 1fr); }

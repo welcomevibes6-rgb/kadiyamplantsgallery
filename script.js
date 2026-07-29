@@ -277,6 +277,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.anim-up, .anim-left, .anim-right, .anim-split').forEach(el => observer.observe(el));
 
+    // ===== ABOUT HEADING LETTER REVEAL (Viewport-Triggered, Once) =====
+    const aboutHeading = document.getElementById('aboutHeading');
+    if (aboutHeading) {
+        // Split heading text into individual letter spans
+        const headingText = aboutHeading.textContent.trim();
+        aboutHeading.innerHTML = '';
+        const totalDuration = 2200; // 2.2 seconds total
+        const chars = headingText.split('');
+        const delayStep = totalDuration / Math.max(chars.length, 1);
+
+        chars.forEach((char, i) => {
+            const span = document.createElement('span');
+            if (char === ' ') {
+                span.innerHTML = '&nbsp;';
+            } else {
+                span.textContent = char;
+            }
+            span.style.transitionDelay = `${i * delayStep}ms`;
+            aboutHeading.appendChild(span);
+        });
+
+        // Observe the about section and trigger letter reveal + content fade once
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) {
+            const aboutObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Trigger heading letter animation
+                        aboutHeading.classList.add('animated');
+
+                        // Trigger content elements with staggered delay after heading
+                        const contentEls = aboutSection.querySelectorAll('.about-content-reveal');
+                        contentEls.forEach((el, idx) => {
+                            setTimeout(() => {
+                                el.classList.add('content-visible');
+                            }, totalDuration + 300 + (idx * 200));
+                        });
+
+                        aboutObserver.unobserve(entry.target);
+                    }
+                });
+            }, { rootMargin: '0px 0px -60px 0px', threshold: 0.15 });
+
+            aboutObserver.observe(aboutSection);
+        }
+    }
+
     // ===== FORMS SUBMISSION =====
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {

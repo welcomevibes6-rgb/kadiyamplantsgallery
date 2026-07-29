@@ -1,340 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Premium landscaping services by Kadiyam Plants Gallery: lawn development, villa garden design, plant supply, and regular garden maintenance in Andhra Pradesh.">
-  <title>Landscaping Services | Kadiyam Plants Gallery</title>
-  
-  <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Local Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landscaping Services | Kadiyam Plants Gallery</title>
+    <meta name="description" content="Premium landscaping services by Kadiyam Plants Gallery: lawn development, villa garden design, plant supply, and regular garden maintenance in Andhra Pradesh.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Floating Social Actions -->
-  <div class="floating-actions">
-    <a href="https://wa.me/917207755335" target="_blank" class="float-btn whatsapp" aria-label="Chat on WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="tel:7207755335" class="float-btn phone" aria-label="Call Us">
-      <i class="fas fa-phone-alt"></i>
-    </a>
-    <a href="https://www.instagram.com/kadiyam_plants_gallery" target="_blank" class="float-btn instagram" aria-label="Follow on Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </div>
-
-  <!-- Top Contact Bar -->
-  <div class="top-bar">
-    <div class="container top-bar-content">
-      <div class="top-bar-contact">
-        <a href="mailto:kadiyamplantsgallery@gmail.com"><i class="fas fa-envelope"></i> kadiyamplantsgallery@gmail.com</a>
-        <a href="tel:7207755335"><i class="fas fa-phone-alt"></i> 7207755335</a>
-        <a href="https://wa.me/917207755335" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-      </div>
-      <div class="top-bar-socials">
-        <a href="https://www.instagram.com/kadiyam_plants_gallery" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://share.google/ORdUQ8QDstT3n8Wep" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
-      </div>
+<!-- ===== TOP BAR ===== -->
+<div class="top-bar">
+    <div class="container top-bar-inner">
+        <div class="top-bar-left">
+            <a href="mailto:kadiyamplantsgallery@gmail.com"><i class="fas fa-envelope"></i> kadiyamplantsgallery@gmail.com</a>
+        </div>
+        <div class="top-bar-right">
+            <a href="tel:+917207755335"><i class="fas fa-phone-alt"></i> 7207755335</a>
+            <a href="https://www.instagram.com/kadiyam_plants_gallery?igsh=MWoxNXk2am1xbWY4YQ==" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://wa.me/917207755335" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
     </div>
-  </div>
+</div>
 
-  <!-- Sticky Navbar -->
-  <header>
-    <div class="container navbar">
-      <a href="index.html" class="logo-container">
-        <img src="images/logo.png" alt="Kadiyam Plants Gallery Tree Logo" class="logo-img">
-        <div class="brand-name">
-          Kadiyam Plants Gallery
-          <span>Nursery & Landscaping</span>
-        </div>
-      </a>
-      
-      <div class="menu-toggle" id="menuToggle">
-        <i class="fas fa-bars"></i>
-      </div>
-      
-      <ul class="nav-links" id="navLinks">
-        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-        <li class="nav-item">
-          <a href="varieties.html" class="nav-link">Plant Varieties <i class="fas fa-chevron-down"></i></a>
-          <ul class="dropdown-menu">
-            <li class="dropdown-item"><a href="varieties.html?category=outdoor">Outdoor Plants</a></li>
-            <li class="dropdown-item"><a href="varieties.html?category=flowering">Flowering Plants</a></li>
-            <li class="dropdown-item"><a href="varieties.html?category=ficus">Ficus Plants</a></li>
-            <li class="dropdown-item"><a href="varieties.html?category=fruit">Fruit Plants</a></li>
-            <li class="dropdown-item"><a href="varieties.html?category=avenue">Avenue Plants</a></li>
-            <li class="dropdown-item"><a href="varieties.html?category=border">Border Plants</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a href="landscaping.html" class="nav-link active">Landscaping Services</a></li>
-        <li class="nav-item">
-          <a href="gallery.html" class="nav-link">Gallery <i class="fas fa-chevron-down"></i></a>
-          <ul class="dropdown-menu">
-            <li class="dropdown-item"><a href="gallery.html?tab=photos">Photos</a></li>
-            <li class="dropdown-item"><a href="gallery.html?tab=videos">Videos</a></li>
-            <li class="dropdown-item"><a href="gallery.html?tab=loading">Loading Plants</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <!-- Subpage Hero Band -->
-  <section class="subpage-hero" style="background-image: linear-gradient(rgba(13, 44, 29, 0.75), rgba(13, 44, 29, 0.75)), url('images/121.png');">
-    <h1 class="subpage-hero-title letter-reveal">Landscaping Services</h1>
-  </section>
-
-  <!-- Landscaping Portfolio & Services Section -->
-  <section class="section-padding" style="background-color: var(--color-cream);">
-    <div class="container">
-      
-      <!-- Intro copy -->
-      <div class="text-center landscaping-intro reveal reveal-fade">
-        <span class="section-subtitle font-sans">Premium Outdoor Architectures</span>
-        <h2 class="section-title letter-reveal">Our Landscaping Projects</h2>
-        <p style="color: var(--color-text-light); margin-top: 15px;">We specialize in designing lush layouts for luxury villas, corporate parkways, hotels, and farmhouses. Our work spans Lawn Development, Villa Landscaping, Garden Design, and Lawn Maintenance Services.</p>
-      </div>
-
-      <!-- Asymmetric Premium Mosaic Grid (images 128.png to 139.png) -->
-      <div class="landscaping-asym-grid">
-        <!-- Tile 1 (128.png) - Large feature top left -->
-        <div class="landscape-tile col-span-2 row-span-2 reveal reveal-left">
-          <img src="images/128.png" alt="Luxury Villa Landscape Design" loading="lazy">
-          <div class="landscape-tile-content">
-            <h3>Premium Villa Landscape</h3>
-            <p>Complete layout planning utilizing ornamental ficus spheres and carpet lawns.</p>
-          </div>
-        </div>
-
-        <!-- Tile 2 (129.png) -->
-        <div class="landscape-tile reveal reveal-up" style="transition-delay: 50ms;">
-          <img src="images/129.png" alt="Garden Path Guidance" loading="lazy">
-          <div class="landscape-tile-content">
-            <h3>Stepping Stone Pathways</h3>
-            <p>Elegant pebble pathways framed with dwarf border shrubs.</p>
-          </div>
-        </div>
-
-        <!-- Tile 3 (130.png) - Vertical right banner -->
-        <div class="landscape-tile row-span-2 reveal reveal-right">
-          <img src="images/130.png" alt="Lush Lawn Setup" loading="lazy">
-          <div class="landscape-tile-content">
-            <h3>Korean Lawn Development</h3>
-            <p>Thick, velvety grass layouts designed for durability and rich color.</p>
-          </div>
-        </div>
-
-        <!-- Tile 4 (131.png) -->
-        <div class="landscape-tile reveal reveal-up" style="transition-delay: 150ms;">
-          <img src="images/131.png" alt="Symmetrical Green Hedge" loading="lazy">
-          <div class="landscape-tile-content">
-            <h3>Structured Hedges</h3>
-            <p>Neatly trimmed border plants that offer excellent privacy framing.</p>
-          </div>
-        </div>
-
-        <!-- Tile 5 (132.png) - Horizontal banner center bottom -->
-        <div class="landscape-tile col-span-2 reveal reveal-fade" style="transition-delay: 100ms;">
-          <img src="images/132.png" alt="Nursery Supply Setup" loading="lazy">
-          <div class="landscape-tile-content">
-            <h3>Botanical Garden Layouts</h3>
-            <p>A diverse mixing of flowering bushes and evergreen canopies.</p>
-          </div>
-        </div>
-
-        <!-- Tile 6 (133.png) -->
-        <div class="landscape-tile reveal reveal-up" style="transition-delay: 200ms;">
-          <img src="images/133.png" alt="Pebble Garden Accents" loading="lazy">
-          <div class="landscape-tile-content">
-            <h3>Zen Pebble Accents</h3>
-            <p>Modern xeriscaping structures for low water maintenance zones.</p>
-          </div>
-        </div>
-
-        <!-- Tile 7 (134.png) -->
-        <div class="landscape-tile reveal reveal-left">
-          <img src="images/134.png" alt="Hotel Courtyard Greens" loading="lazy">
-          <div class="landscape-tile-content">
-            <h3>Hotel Courtyard Landscaping</h3>
-            <p>Creating relaxing social environments using tall palms and container greens.</p>
-          </div>
-        </div>
-
-        <!-- Tile 8 (135.png) - Vertical left banner -->
-        <div class="landscape-tile row-span-2 reveal reveal-left" style="transition-delay: 50ms;">
-          <img src="images/135.png" alt="Tropical Canopy Layout" loading="lazy">
-          <div class="landscape-tile-content">
-            <h3>Tropical Shading Canopies</h3>
-            <p>Strategically placing tall avenue trees to filter sunlight and reduce heat.</p>
-          </div>
-        </div>
-
-        <!-- Tile 9 (136.png) - Large bottom right feature -->
-        <div class="landscape-tile col-span-2 row-span-2 reveal reveal-right" style="transition-delay: 100ms;">
-          <img src="images/136.png" alt="Grand Landscape Layout" loading="lazy">
-          <div class="landscape-tile-content">
-            <h3>Farmhouse Botanical Estates</h3>
-            <p>A grand assembly of large foliage layouts, flowering borders, and lawns.</p>
-          </div>
-        </div>
-
-        <!-- Tile 10 (137.png) -->
-        <div class="landscape-tile reveal reveal-up" style="transition-delay: 250ms;">
-          <img src="images/137.png" alt="Ficus Topiary Layout" loading="lazy">
-          <div class="landscape-tile-content">
-            <h3>Sculpted Ficus Standards</h3>
-            <p>Placing beautiful trained topiary shapes at architectural access points.</p>
-          </div>
-        </div>
-
-        <!-- Tile 11 (138.png) -->
-        <div class="landscape-tile reveal reveal-fade" style="transition-delay: 150ms;">
-          <img src="images/138.png" alt="Garden Rockery Design" loading="lazy">
-          <div class="landscape-tile-content">
-            <h3>Alpine Rockery layouts</h3>
-            <p>Stunning natural rock designs intermixed with agave and colored cordylines.</p>
-          </div>
-        </div>
-
-        <!-- Tile 12 (139.png) -->
-        <div class="landscape-tile reveal reveal-right">
-          <img src="images/139.png" alt="Poolside Greens Setup" loading="lazy">
-          <div class="landscape-tile-content">
-            <h3>Poolside Landscaping</h3>
-            <p>Wind-resistant, non-shedding palm and shrub selections for poolsides.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Service Highlights Section -->
-      <div class="service-desc-list">
-        <!-- Service Item 1: Lawn Development -->
-        <div class="service-desc-item reveal reveal-left">
-          <div class="service-desc-icon">
-            <i class="fas fa-square"></i>
-          </div>
-          <div class="service-desc-content">
-            <h3>Lawn Development Services</h3>
-            <p>We source and lay top-grade Mexican, Korean, and Bermuda carpet grass. Our process includes complete soil preparation, leveling, organic manure treatment, lawn compaction, and initial irrigation systems setup to ensure thick, uniform root growth.</p>
-          </div>
-        </div>
-
-        <!-- Service Item 2: Villa Landscaping -->
-        <div class="service-desc-item reveal reveal-right">
-          <div class="service-desc-icon">
-            <i class="fas fa-home"></i>
-          </div>
-          <div class="service-desc-content">
-            <h3>Villa Landscaping & Designs</h3>
-            <p>We create beautiful customized garden outlines for luxury villas. By integrating structured ficus standards, colored accent cordylines, border hedges, and decorative pebble steps, we transform plain backyards into relaxing private nature sanctuaries.</p>
-          </div>
-        </div>
-
-        <!-- Service Item 3: Garden Design -->
-        <div class="service-desc-item reveal reveal-left">
-          <div class="service-desc-icon">
-            <i class="fas fa-drafting-table"></i>
-          </div>
-          <div class="service-desc-content">
-            <h3>Garden Layout & Architecture</h3>
-            <p>Our experienced horticulturists draft botanical arrangements according to sunlight direction, soil conditions, and surrounding architecture. We balance flowering colors, shading trees, and foliage structures to keep the garden active all seasons.</p>
-          </div>
-        </div>
-
-        <!-- Service Item 4: Lawn Maintenance -->
-        <div class="service-desc-item reveal reveal-right">
-          <div class="service-desc-icon">
-            <i class="fas fa-scissors"></i>
-          </div>
-          <div class="service-desc-content">
-            <h3>Lawn & Garden Maintenance</h3>
-            <p>Ensure your landscaping assets remain healthy and beautiful. We offer ongoing maintenance contracts including grass mowing, hedge clipping, tree pruning, soil aeration, organic fertilizing, and organic pest protection treatment.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <!-- About Column -->
-        <div class="footer-about">
-          <div class="footer-logo">
-            <img src="images/123.png" alt="Kadiyam Plants Gallery Logo" class="logo-img" style="height: 40px; border-radius: 6px;">
-            <div class="brand-name">
-              Kadiyam Plants Gallery
-              <span style="color: #7d9e8c;">Premium Nursery</span>
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Kadiyam Plants Gallery Logo" class="logo-img">
+            <div class="logo-text">
+                <span class="logo-name">Kadiyam Plants Gallery</span>
+                <span class="logo-sub">NURSERY & LANDSCAPING</span>
             </div>
-          </div>
-          <p>Cultivating native and ornamental beauty for over 10 years in Kadiyam, Andhra Pradesh. We specialize in home gardening setups and grand landscaping projects.</p>
-          <div class="footer-socials">
-            <a href="https://www.instagram.com/kadiyam_plants_gallery" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/917207755335" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a href="tel:7207755335" aria-label="Phone"><i class="fas fa-phone-alt"></i></a>
-          </div>
+        </a>
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <div class="nav-dropdown">
+                <a href="varieties.html" class="nav-link">Varieties <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="varieties.html?category=outdoor">Outdoor Plants</a>
+                    <a href="varieties.html?category=flowering">Flowering Plants</a>
+                    <a href="varieties.html?category=ficus">Ficus Plants</a>
+                    <a href="varieties.html?category=fruit">Fruit Plants</a>
+                    <a href="varieties.html?category=avenue">Avenue Plants</a>
+                    <a href="varieties.html?category=border">Border Plants</a>
+                </div>
+            </div>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="landscaping.html" class="nav-link active">Landscaping Works</a>
+            <a href="contact.html" class="nav-link">Contact Us</a>
+        </nav>
+        <div class="nav-toggle" id="navToggle">
+            <span></span><span></span><span></span>
         </div>
-        
-        <!-- Quick Links -->
-        <div class="footer-links-col">
-          <h3>Quick Links</h3>
-          <ul class="footer-links">
-            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
-            <li><a href="landscaping.html"><i class="fas fa-chevron-right"></i> Landscaping</a></li>
-            <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Media Gallery</a></li>
-            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
-          </ul>
-        </div>
-        
-        <!-- Plant Catalog Quick Links -->
-        <div class="footer-links-col">
-          <h3>Categories</h3>
-          <ul class="footer-links">
-            <li><a href="varieties.html?category=outdoor"><i class="fas fa-chevron-right"></i> Outdoor Plants</a></li>
-            <li><a href="varieties.html?category=flowering"><i class="fas fa-chevron-right"></i> Flowering Plants</a></li>
-            <li><a href="varieties.html?category=ficus"><i class="fas fa-chevron-right"></i> Ficus Plants</a></li>
-            <li><a href="varieties.html?category=fruit"><i class="fas fa-chevron-right"></i> Fruit Trees</a></li>
-            <li><a href="varieties.html?category=avenue"><i class="fas fa-chevron-right"></i> Avenue Trees</a></li>
-          </ul>
-        </div>
-        
-        <!-- Address & Contacts -->
-        <div class="footer-links-col">
-          <h3>Nursery Location</h3>
-          <ul class="footer-contact-info">
-            <li>
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Kadiapulanka, Kadiyam Mandal,<br>Andhra Pradesh, India</span>
-            </li>
-            <li>
-              <i class="fas fa-phone-alt"></i>
-              <a href="tel:7207755335">7207755335</a>
-            </li>
-            <li>
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:kadiyamplantsgallery@gmail.com">kadiyamplantsgallery@gmail.com</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p>&copy; 2026 Kadiyam Plants Gallery. All Rights Reserved.</p>
-        <p>Crafted for botanical excellence.</p>
-      </div>
     </div>
-  </footer>
+</header>
 
-  <!-- Vanilla Script File -->
-  <script src="script.js"></script>
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero">
+    <img src="images/130.png" alt="Landscaping Services" class="page-hero-img">
+    <div class="page-hero-overlay">
+        <h1>Landscaping Services</h1>
+        <p>Premium outdoor architectures & garden designs</p>
+    </div>
+</section>
+
+<!-- ===== LANDSCAPE PORTFOLIO ===== -->
+<section class="section">
+    <div class="container">
+        <div class="section-header anim-up">
+            <span class="section-label"><i class="fas fa-drafting-compass"></i> Our Work</span>
+            <h2 class="section-title">Our Landscaping Projects</h2>
+            <p class="section-desc">We specialize in designing lush layouts for luxury villas, corporate parkways, hotels, and farmhouses</p>
+        </div>
+
+        <!-- Landscape Tile Grid -->
+        <div class="landscaping-grid">
+            <div class="landscape-tile col-span-2 row-span-2 anim-left">
+                <img src="images/128.png" alt="Luxury Villa Landscape Design" loading="lazy">
+                <div class="landscape-tile-content">
+                    <h3>Premium Villa Landscape</h3>
+                    <p>Complete layout planning utilizing ornamental ficus spheres and carpet lawns.</p>
+                </div>
+            </div>
+            <div class="landscape-tile anim-up" style="--delay: 0.05s">
+                <img src="images/129.png" alt="Garden Path Guidance" loading="lazy">
+                <div class="landscape-tile-content">
+                    <h3>Stepping Stone Pathways</h3>
+                    <p>Elegant pebble pathways framed with dwarf border shrubs.</p>
+                </div>
+            </div>
+            <div class="landscape-tile row-span-2 anim-right">
+                <img src="images/130.png" alt="Lush Lawn Setup" loading="lazy">
+                <div class="landscape-tile-content">
+                    <h3>Korean Lawn Development</h3>
+                    <p>Thick, velvety grass layouts designed for durability and rich color.</p>
+                </div>
+            </div>
+            <div class="landscape-tile anim-up" style="--delay: 0.15s">
+                <img src="images/131.png" alt="Symmetrical Green Hedge" loading="lazy">
+                <div class="landscape-tile-content">
+                    <h3>Structured Hedges</h3>
+                    <p>Neatly trimmed border plants that offer excellent privacy framing.</p>
+                </div>
+            </div>
+            <div class="landscape-tile col-span-2 anim-up" style="--delay: 0.1s">
+                <img src="images/132.png" alt="Nursery Supply Setup" loading="lazy">
+                <div class="landscape-tile-content">
+                    <h3>Botanical Garden Layouts</h3>
+                    <p>A diverse mixing of flowering bushes and evergreen canopies.</p>
+                </div>
+            </div>
+            <div class="landscape-tile anim-up" style="--delay: 0.2s">
+                <img src="images/133.png" alt="Pebble Garden Accents" loading="lazy">
+                <div class="landscape-tile-content">
+                    <h3>Zen Pebble Accents</h3>
+                    <p>Modern xeriscaping structures for low water maintenance zones.</p>
+                </div>
+            </div>
+            <div class="landscape-tile anim-left" style="--delay: 0.1s">
+                <img src="images/134.png" alt="Hotel Courtyard Greens" loading="lazy">
+                <div class="landscape-tile-content">
+                    <h3>Hotel Courtyard Landscaping</h3>
+                    <p>Creating relaxing social environments using tall palms and container greens.</p>
+                </div>
+            </div>
+            <div class="landscape-tile row-span-2 anim-left" style="--delay: 0.05s">
+                <img src="images/135.png" alt="Tropical Canopy Layout" loading="lazy">
+                <div class="landscape-tile-content">
+                    <h3>Tropical Shading Canopies</h3>
+                    <p>Strategically placing tall avenue trees to filter sunlight and reduce heat.</p>
+                </div>
+            </div>
+            <div class="landscape-tile col-span-2 row-span-2 anim-right" style="--delay: 0.1s">
+                <img src="images/136.png" alt="Grand Landscape Layout" loading="lazy">
+                <div class="landscape-tile-content">
+                    <h3>Farmhouse Botanical Estates</h3>
+                    <p>A grand assembly of large foliage layouts, flowering borders, and lawns.</p>
+                </div>
+            </div>
+            <div class="landscape-tile anim-up" style="--delay: 0.25s">
+                <img src="images/137.png" alt="Ficus Topiary Layout" loading="lazy">
+                <div class="landscape-tile-content">
+                    <h3>Sculpted Ficus Standards</h3>
+                    <p>Placing beautiful trained topiary shapes at architectural access points.</p>
+                </div>
+            </div>
+            <div class="landscape-tile anim-up" style="--delay: 0.15s">
+                <img src="images/138.png" alt="Garden Rockery Design" loading="lazy">
+                <div class="landscape-tile-content">
+                    <h3>Alpine Rockery Layouts</h3>
+                    <p>Stunning natural rock designs intermixed with agave and colored cordylines.</p>
+                </div>
+            </div>
+            <div class="landscape-tile anim-right" style="--delay: 0.1s">
+                <img src="images/139.png" alt="Poolside Greens Setup" loading="lazy">
+                <div class="landscape-tile-content">
+                    <h3>Poolside Landscaping</h3>
+                    <p>Wind-resistant, non-shedding palm and shrub selections for poolsides.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Highlights -->
+        <div class="service-desc-list">
+            <div class="service-desc-item anim-left">
+                <div class="service-desc-icon"><i class="fas fa-expand"></i></div>
+                <div class="service-desc-content">
+                    <h3>Lawn Development Services</h3>
+                    <p>We source and lay top-grade Mexican, Korean, and Bermuda carpet grass. Our process includes complete soil preparation, leveling, organic manure treatment, lawn compaction, and initial irrigation systems setup.</p>
+                </div>
+            </div>
+            <div class="service-desc-item anim-right">
+                <div class="service-desc-icon"><i class="fas fa-home"></i></div>
+                <div class="service-desc-content">
+                    <h3>Villa Landscaping & Designs</h3>
+                    <p>We create beautiful customized garden outlines for luxury villas. By integrating structured ficus standards, colored accent cordylines, border hedges, and decorative pebble steps.</p>
+                </div>
+            </div>
+            <div class="service-desc-item anim-left">
+                <div class="service-desc-icon"><i class="fas fa-pencil-ruler"></i></div>
+                <div class="service-desc-content">
+                    <h3>Garden Layout & Architecture</h3>
+                    <p>Our experienced horticulturists draft botanical arrangements according to sunlight direction, soil conditions, and surrounding architecture for year-round active gardens.</p>
+                </div>
+            </div>
+            <div class="service-desc-item anim-right">
+                <div class="service-desc-icon"><i class="fas fa-cut"></i></div>
+                <div class="service-desc-content">
+                    <h3>Lawn & Garden Maintenance</h3>
+                    <p>We offer ongoing maintenance contracts including grass mowing, hedge clipping, tree pruning, soil aeration, organic fertilizing, and organic pest protection treatment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close"><i class="fas fa-times"></i></button>
+    <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+    <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+    <div class="lightbox-content">
+        <img src="" alt="" id="lightboxImg">
+    </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="footer-curve"></div>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Logo" class="footer-logo-img">
+                    <h3>Kadiyam Plants Gallery</h3>
+                </div>
+                <p class="footer-desc">Your trusted partner in greenery. Cultivating native and ornamental beauty for over 10 years in Kadiyam, Andhra Pradesh.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="footer-contact-list">
+                    <li><i class="fas fa-map-marker-alt"></i> Kadiapulanka, Kadiyam Mandal, AP</li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:kadiyamplantsgallery@gmail.com">kadiyamplantsgallery@gmail.com</a></li>
+                    <li><i class="fas fa-phone-alt"></i> <a href="tel:+917207755335">+91 7207755335</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="varieties.html">Varieties</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="landscaping.html">Landscaping Works</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <div class="footer-social">
+                    <a href="https://wa.me/917207755335" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/kadiyam_plants_gallery?igsh=MWoxNXk2am1xbWY4YQ==" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="tel:+917207755335" class="social-icon"><i class="fas fa-phone-alt"></i></a>
+                </div>
+                <p class="footer-cta">Open for orders & landscaping consultations. Reach out today!</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kadiyam Plants Gallery. All Rights Reserved.</p>
+            <p>Designed with <i class="fas fa-leaf" style="color: #4ade80;"></i> care</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Floating Buttons -->
+<a href="https://wa.me/917207755335" target="_blank" class="floating-btn floating-whatsapp"><i class="fab fa-whatsapp"></i></a>
+<a href="tel:+917207755335" class="floating-btn floating-call"><i class="fas fa-phone-alt"></i></a>
+
+<script src="script.js"></script>
 </body>
 </html>

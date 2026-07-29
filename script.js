@@ -1,606 +1,323 @@
 /* 
 ========================================================================
-   KADIYAM PLANTS GALLERY - Premium Functionality Script
+   KADIYAM PLANTS GALLERY — Premium Functionality Script
+   Handles Navbar, Hero Slider, Category Filtering, Lightbox, Animations
 ========================================================================
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize all modular scripts
-  initNavbar();
-  initHeroSlider();
-  initLetterReveal();
-  initScrollAnimations();
-  initPlantCatalog();
-  initGalleryTabs();
-  initEnquiryForm();
-});
 
-/* ==========================================
-   1. NAVBAR & NAVIGATION
-   ========================================== */
-function initNavbar() {
-  const header = document.querySelector('header');
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  const dropdownLinks = document.querySelectorAll('.nav-item > .nav-link');
-
-  // Sticky navbar shadow on scroll
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      header.classList.add('header-scrolled');
-    } else {
-      header.classList.remove('header-scrolled');
-    }
-  });
-
-  // Mobile menu toggle
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      const icon = menuToggle.querySelector('i');
-      if (icon) {
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-times');
-      }
+    // ===== HEADER SCROLL EFFECT =====
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        if (header) header.classList.toggle('scrolled', window.scrollY > 30);
     });
-  }
 
-  // Mobile dropdown handling
-  dropdownLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      if (window.innerWidth <= 768) {
-        // Toggle active-mobile-dropdown on parent .nav-item
-        const parent = link.parentElement;
-        if (parent) {
-          e.preventDefault();
-          parent.classList.toggle('active-mobile-dropdown');
+    // ===== MOBILE NAV MENU =====
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('open');
+            navMenu.classList.toggle('open');
+        });
+        document.querySelectorAll('.nav-menu .nav-link, .dropdown-content a').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('open');
+                navMenu.classList.remove('open');
+            });
+        });
+    }
+
+    // ===== HERO SLIDER =====
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.hero-prev');
+    const nextBtn = document.querySelector('.hero-next');
+
+    if (slides.length > 0) {
+        let currentSlide = 0;
+        let slideInterval;
+        let isPaused = false;
+
+        function goToSlide(idx) {
+            slides.forEach(s => { s.classList.remove('active'); });
+            dots.forEach(d => d.classList.remove('active'));
+            currentSlide = ((idx % slides.length) + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            if (dots[currentSlide]) dots[currentSlide].classList.add('active');
         }
-      }
-    });
-  });
 
-  // Set active link based on current page path
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  const navItems = document.querySelectorAll('.nav-link');
-  navItems.forEach(item => {
-    const href = item.getAttribute('href');
-    if (href === currentPath) {
-      item.classList.add('active');
-    } else {
-      item.classList.remove('active');
-    }
-  });
-}
-
-/* ==========================================
-   2. CUSTOM HERO SLIDER WITH PAIRWISE TRANSITIONS
-   ========================================== */
-function initHeroSlider() {
-  const slider = document.querySelector('.hero-slider');
-  if (!slider) return;
-
-  const slides = slider.querySelectorAll('.slide');
-  const dotsContainer = slider.querySelector('.slider-indicators');
-  
-  if (slides.length === 0) return;
-
-  let currentIdx = 0;
-  let sliderInterval = null;
-  const slideDuration = 5500; // 5.5 seconds
-
-  // Transition class styles for pairs
-  // Slide 0 -> 1: slide-left-right
-  // Slide 1 -> 2: zoom-fade
-  // Slide 2 -> 0: wipe
-  const transitions = [
-    'transition-slide-left-right',
-    'transition-zoom-fade',
-    'transition-wipe'
-  ];
-
-  // 2a. Create Indicator Dots
-  if (dotsContainer) {
-    dotsContainer.innerHTML = '';
-    slides.forEach((_, idx) => {
-      const dot = document.createElement('button');
-      dot.classList.add('dot');
-      dot.setAttribute('aria-label', `Go to slide ${idx + 1}`);
-      if (idx === 0) dot.classList.add('active');
-      
-      dot.addEventListener('click', () => {
-        if (idx !== currentIdx) {
-          jumpToSlide(idx);
+        function startAuto() {
+            slideInterval = setInterval(() => { if (!isPaused) goToSlide(currentSlide + 1); }, 5000);
         }
-      });
-      dotsContainer.appendChild(dot);
-    });
-  }
 
-  const dots = dotsContainer ? dotsContainer.querySelectorAll('.dot') : [];
+        if (nextBtn) nextBtn.addEventListener('click', () => { goToSlide(currentSlide + 1); clearInterval(slideInterval); startAuto(); });
+        if (prevBtn) prevBtn.addEventListener('click', () => { goToSlide(currentSlide - 1); clearInterval(slideInterval); startAuto(); });
+        dots.forEach(d => d.addEventListener('click', () => { goToSlide(+d.dataset.slide); clearInterval(slideInterval); startAuto(); }));
 
-  // 2b. Navigation Arrow Listeners
-  const prevBtn = slider.querySelector('.prev-arrow');
-  const nextBtn = slider.querySelector('.next-arrow');
-
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
-      const prevIdx = (currentIdx - 1 + slides.length) % slides.length;
-      jumpToSlide(prevIdx);
-    });
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-      const nextIdx = (currentIdx + 1) % slides.length;
-      jumpToSlide(nextIdx);
-    });
-  }
-
-  // 2b. Transition logic
-  function changeSlide(nextIdx) {
-    const currSlide = slides[currentIdx];
-    const nextSlide = slides[nextIdx];
-    
-    // Choose transition class depending on current index
-    const transitionClass = transitions[currentIdx];
-    
-    // Set transition layout on container
-    slider.className = 'hero-slider ' + transitionClass;
-    
-    // Mark previous slide for animation out
-    currSlide.classList.add('active-out');
-    currSlide.classList.remove('active');
-    
-    // Prepare next slide
-    nextSlide.classList.add('active');
-    
-    // Update Indicators
-    if (dots.length > 0) {
-      dots.forEach(d => d.classList.remove('active'));
-      dots[nextIdx].classList.add('active');
-    }
-    
-    // Clean up animation state after slide completion
-    setTimeout(() => {
-      currSlide.classList.remove('active-out');
-    }, 1500);
-    
-    // Replay heading letter reveals on the new slide
-    triggerSlideTextReveal(nextSlide);
-    
-    currentIdx = nextIdx;
-  }
-
-  function startAutoplay() {
-    stopAutoplay();
-    sliderInterval = setInterval(() => {
-      const nextIdx = (currentIdx + 1) % slides.length;
-      changeSlide(nextIdx);
-    }, slideDuration);
-  }
-
-  function stopAutoplay() {
-    if (sliderInterval) {
-      clearInterval(sliderInterval);
-    }
-  }
-
-  function jumpToSlide(targetIdx) {
-    stopAutoplay();
-    changeSlide(targetIdx);
-    startAutoplay();
-  }
-
-  function typewriterEffect(element) {
-    if (!element) return;
-    const fullText = element.getAttribute('data-full-text') || element.textContent.trim();
-    if (!element.getAttribute('data-full-text')) {
-      element.setAttribute('data-full-text', fullText);
-    }
-    
-    element.textContent = '';
-    let i = 0;
-    if (element.typeInterval) clearInterval(element.typeInterval);
-    
-    element.typeInterval = setInterval(() => {
-      if (i < fullText.length) {
-        element.textContent += fullText.charAt(i);
-        i++;
-      } else {
-        clearInterval(element.typeInterval);
-      }
-    }, 95); // ~95ms pace per letter
-  }
-
-  function triggerSlideTextReveal(slideElement) {
-    const typewriter = document.querySelector('.hero-slider .highlight-typewriter');
-    if (typewriter) {
-      typewriterEffect(typewriter);
-    }
-
-    const reveals = slideElement.querySelectorAll('.letter-reveal');
-    reveals.forEach(reveal => {
-      reveal.classList.remove('animated');
-      // Trigger reflow
-      void reveal.offsetWidth;
-      reveal.classList.add('animated');
-    });
-  }
-
-  // Trigger initial slide text reveal and start loop
-  if (slides[0]) {
-    triggerSlideTextReveal(slides[0]);
-  }
-  startAutoplay();
-}
-
-/* ==========================================
-   3. LETTER REVEAL ANIMATIONS
-   ========================================== */
-function initLetterReveal() {
-  const typewriters = document.querySelectorAll('.highlight-typewriter');
-  typewriters.forEach(elem => {
-    if (!elem.getAttribute('data-full-text')) {
-      elem.setAttribute('data-full-text', elem.textContent.trim());
-    }
-  });
-
-  const revealElements = document.querySelectorAll('.letter-reveal');
-  
-  revealElements.forEach(element => {
-    const text = element.textContent.trim();
-    element.innerHTML = '';
-    
-    // Calculate stagger step to ensure a smooth 1.5-2s total reveal duration
-    const totalChars = text.length || 1;
-    const delayStep = Math.max(35, Math.min(65, Math.floor(1200 / totalChars))); 
-    
-    let charIdx = 0;
-    for (let char of text) {
-      const span = document.createElement('span');
-      // Replace spaces with non-breaking spaces to preserve layout
-      if (char === ' ') {
-        span.innerHTML = '&nbsp;';
-      } else {
-        span.textContent = char;
-      }
-      
-      // Assign custom transition-delay per character for stagger
-      span.style.transitionDelay = `${charIdx * delayStep}ms`;
-      element.appendChild(span);
-      charIdx++;
-    }
-  });
-
-  // Watch for entrance (triggers once when section first becomes visible)
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animated');
-        observer.unobserve(entry.target); // Trigger once
-      }
-    });
-  }, { threshold: 0.1 });
-
-  revealElements.forEach(elem => observer.observe(elem));
-}
-
-/* ==========================================
-   4. GENERAL SCROLL ENTRANCE ANIMATIONS
-   ========================================== */
-function initScrollAnimations() {
-  const reveals = document.querySelectorAll('.reveal');
-
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target); // Trigger once
-      }
-    });
-  }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
-
-  reveals.forEach(reveal => revealObserver.observe(reveal));
-}
-
-/* ==========================================
-   5. PLANT CATALOG & LIGHTBOX
-   ========================================== */
-function initPlantCatalog() {
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const plantCards = document.querySelectorAll('.plant-card');
-  const lightbox = document.getElementById('lightboxModal');
-  
-  if (!plantCards.length) return;
-
-  // 5a. Category Filtering Action
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Set active button
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      
-      const filter = btn.getAttribute('data-filter');
-
-      plantCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        
-        if (filter === 'all' || category === filter) {
-          // Slide & Fade entrance style
-          card.style.display = 'flex';
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0) scale(1)';
-          }, 50);
-        } else {
-          // Slide & Fade exit style
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(15px) scale(0.95)';
-          setTimeout(() => {
-            card.style.display = 'none';
-          }, 350);
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            hero.addEventListener('mouseenter', () => isPaused = true);
+            hero.addEventListener('mouseleave', () => isPaused = false);
         }
-      });
-    });
-  });
-
-  // URL category parameter check on page load
-  const urlParams = new URLSearchParams(window.location.search);
-  const categoryParam = urlParams.get('category');
-  if (categoryParam) {
-    const targetBtn = document.querySelector(`.filter-btn[data-filter="${categoryParam}"]`);
-    if (targetBtn) {
-      setTimeout(() => {
-        targetBtn.click();
-      }, 100);
+        startAuto();
     }
-  }
 
-  // 5b. Lightbox Popup Logic
-  if (!lightbox) return;
+    // ===== LETTER REVEAL HEADING ANIMATION =====
+    const revealHeadings = document.querySelectorAll('.letter-reveal');
+    revealHeadings.forEach(heading => {
+        const text = heading.textContent.trim();
+        heading.innerHTML = '';
+        const chars = text.split('');
+        const delayStep = 1800 / Math.max(chars.length, 1); // ~1.8 seconds total duration
 
-  const lightboxImg = lightbox.querySelector('.lightbox-img');
-  const lightboxCaption = lightbox.querySelector('.lightbox-caption');
-  const closeBtn = lightbox.querySelector('.lightbox-close');
-  const prevBtn = lightbox.querySelector('.lightbox-prev');
-  const nextBtn = lightbox.querySelector('.lightbox-next');
-  
-  let currentGroupImages = [];
-  let currentImgIndex = 0;
-
-  // Click card image to trigger lightbox
-  document.querySelectorAll('.plant-card-img, .masonry-item').forEach(clickable => {
-    clickable.addEventListener('click', () => {
-      // Find list of images based on current grid visibility
-      const isGallery = clickable.classList.contains('masonry-item');
-      
-      if (isGallery) {
-        // Collect all items in the masonry grid
-        const allItems = Array.from(document.querySelectorAll('.masonry-item img'));
-        currentGroupImages = allItems.map(img => ({
-          src: img.getAttribute('src'),
-          title: img.getAttribute('alt') || 'Nursery Gallery Image'
-        }));
-        const index = allItems.indexOf(clickable.querySelector('img') || clickable);
-        currentImgIndex = index !== -1 ? index : 0;
-      } else {
-        // Collect currently visible plant cards
-        const allVisibleCards = Array.from(document.querySelectorAll('.plant-card'))
-          .filter(card => card.style.display !== 'none');
-        
-        currentGroupImages = allVisibleCards.map(card => {
-          const img = card.querySelector('.plant-card-img img');
-          const title = card.querySelector('h3').textContent;
-          return {
-            src: img.getAttribute('src'),
-            title: title
-          };
+        chars.forEach((char, i) => {
+            const span = document.createElement('span');
+            if (char === ' ') {
+                span.innerHTML = '&nbsp;';
+            } else {
+                span.textContent = char;
+            }
+            span.style.transitionDelay = `${i * delayStep}ms`;
+            heading.appendChild(span);
         });
 
-        const activeCard = clickable.closest('.plant-card');
-        currentImgIndex = allVisibleCards.indexOf(activeCard);
-      }
-
-      openLightbox();
+        // Trigger reveal once
+        setTimeout(() => {
+            heading.classList.add('animated');
+        }, 150);
     });
-  });
 
-  function openLightbox() {
-    updateLightboxContent();
-    lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Lock background scroll
-  }
+    // ===== VARIETIES CATEGORY PILL FILTERING =====
+    const filterPills = document.querySelectorAll('.filter-pill');
+    const plantCards = document.querySelectorAll('#varietyGrid .plant-card');
 
-  function closeLightbox() {
-    lightbox.classList.remove('active');
-    document.body.style.overflow = ''; // Restore scroll
-  }
+    if (filterPills.length > 0 && plantCards.length > 0) {
+        filterPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                filterPills.forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
 
-  function updateLightboxContent() {
-    if (currentGroupImages.length === 0) return;
-    const current = currentGroupImages[currentImgIndex];
-    if (lightboxImg) lightboxImg.src = current.src;
-    if (lightboxCaption) lightboxCaption.textContent = current.title;
-  }
+                const filter = pill.getAttribute('data-filter');
 
-  function navigateLightbox(dir) {
-    if (dir === 'next') {
-      currentImgIndex = (currentImgIndex + 1) % currentGroupImages.length;
-    } else {
-      currentImgIndex = (currentImgIndex - 1 + currentGroupImages.length) % currentGroupImages.length;
+                plantCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        card.style.display = 'flex';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0) scale(1)';
+                        }, 30);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(10px) scale(0.96)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 250);
+                    }
+                });
+            });
+        });
+
+        // Support category URL query parameter (e.g. varieties.html?category=outdoor)
+        const urlParams = new URLSearchParams(window.location.search);
+        const categoryParam = urlParams.get('category');
+        if (categoryParam) {
+            const targetPill = document.querySelector(`.filter-pill[data-filter="${categoryParam}"]`);
+            if (targetPill) targetPill.click();
+        }
     }
-    updateLightboxContent();
-  }
 
-  if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
-  if (nextBtn) nextBtn.addEventListener('click', () => navigateLightbox('next'));
-  if (prevBtn) prevBtn.addEventListener('click', () => navigateLightbox('prev'));
+    // ===== GALLERY TAB NAVIGATION (Gallery Page) =====
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const galleryPanels = document.querySelectorAll('.gallery-panel');
+    if (tabBtns.length > 0) {
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
 
-  // Close when clicking overlay (outside content)
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-      closeLightbox();
+                const targetTab = btn.getAttribute('data-tab');
+                galleryPanels.forEach(panel => {
+                    if (panel.id === targetTab) {
+                        panel.classList.add('active');
+                    } else {
+                        panel.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const tabParam = urlParams.get('tab');
+        if (tabParam) {
+            const targetBtn = document.querySelector(`.tab-btn[data-tab="${tabParam}"]`);
+            if (targetBtn) targetBtn.click();
+        }
     }
-  });
 
-  // Desktop Keyboard Actions
-  document.addEventListener('keydown', (e) => {
-    if (!lightbox.classList.contains('active')) return;
-    if (e.key === 'ArrowRight') navigateLightbox('next');
-    if (e.key === 'ArrowLeft') navigateLightbox('prev');
-    if (e.key === 'Escape') closeLightbox();
-  });
+    // ===== VIDEO CARD OVERLAY CLICK =====
+    document.querySelectorAll('.video-card').forEach(card => {
+        const video = card.querySelector('video');
+        const overlay = card.querySelector('.video-overlay');
+        if (video && overlay) {
+            overlay.addEventListener('click', () => {
+                document.querySelectorAll('.video-card video').forEach(v => {
+                    if (v !== video) {
+                        v.pause();
+                        v.closest('.video-card').classList.remove('playing');
+                    }
+                });
+                video.play();
+                card.classList.add('playing');
+            });
 
-  // Mobile Touch Swipe Handling
-  let touchStartX = 0;
-  let touchEndX = 0;
+            video.addEventListener('click', () => {
+                if (!video.paused) {
+                    video.pause();
+                    card.classList.remove('playing');
+                }
+            });
 
-  lightbox.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  }, { passive: true });
+            video.addEventListener('pause', () => {
+                card.classList.remove('playing');
+            });
+        }
+    });
 
-  lightbox.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipeGesture();
-  }, { passive: true });
+    // ===== LIGHTBOX POPUP WITH PREV/NEXT & SWIPE =====
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    let lbImages = [];
+    let lbIndex = 0;
 
-  function handleSwipeGesture() {
-    const swipeThreshold = 50; // minimum distance in px
-    if (touchEndX < touchStartX - swipeThreshold) {
-      // Swiped Left -> Next
-      navigateLightbox('next');
+    window.openLightbox = function(src, images, index) {
+        if (!lightbox || !lightboxImg) return;
+        lbImages = images;
+        lbIndex = index;
+        lightboxImg.src = src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    function closeLightbox() {
+        if (!lightbox) return;
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
     }
-    if (touchEndX > touchStartX + swipeThreshold) {
-      // Swiped Right -> Prev
-      navigateLightbox('prev');
+
+    function lbNext() {
+        if (!lbImages.length) return;
+        lbIndex = (lbIndex + 1) % lbImages.length;
+        lightboxImg.src = lbImages[lbIndex];
     }
-  }
-}
 
-/* ==========================================
-   6. GALLERY TABS & CUSTOM PLAY OVERLAYS
-   ========================================== */
-function initGalleryTabs() {
-  const tabBtns = document.querySelectorAll('.gallery-tab-btn');
-  const panels = document.querySelectorAll('.gallery-panel');
-  const videos = document.querySelectorAll('.video-card video');
+    function lbPrev() {
+        if (!lbImages.length) return;
+        lbIndex = (lbIndex - 1 + lbImages.length) % lbImages.length;
+        lightboxImg.src = lbImages[lbIndex];
+    }
 
-  if (!tabBtns.length) return;
+    if (lightbox) {
+        const closeBtn = lightbox.querySelector('.lightbox-close');
+        const nextBtn = lightbox.querySelector('.lightbox-next');
+        const prevBtn = lightbox.querySelector('.lightbox-prev');
 
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      tabBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const targetTab = btn.getAttribute('data-tab');
-
-      // Pause any playing videos when switching tabs
-      videos.forEach(v => {
-        v.pause();
-        const card = v.closest('.video-card');
-        if (card) card.classList.remove('playing');
-      });
-
-      panels.forEach(panel => {
-        const panelName = panel.getAttribute('id');
+        if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+        if (nextBtn) nextBtn.addEventListener('click', lbNext);
+        if (prevBtn) prevBtn.addEventListener('click', lbPrev);
+        lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
         
-        if (panelName === targetTab) {
-          panel.classList.add('active');
-          // Stagger item reveal transitions inside the panel
-          const revealItems = panel.querySelectorAll('.masonry-item, .video-card, .loading-card');
-          revealItems.forEach((item, idx) => {
-            item.style.opacity = '0';
-            item.style.transform = 'translateY(20px)';
-            setTimeout(() => {
-              item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-              item.style.opacity = '1';
-              item.style.transform = 'translateY(0)';
-            }, idx * 50);
-          });
-        } else {
-          panel.classList.remove('active');
+        document.addEventListener('keydown', e => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') lbNext();
+            if (e.key === 'ArrowLeft') lbPrev();
+        });
+
+        // Mobile touch swipe gesture handling
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        lightbox.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        lightbox.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchEndX < touchStartX - 40) lbNext(); // Swipe Left -> Next
+            if (touchEndX > touchStartX + 40) lbPrev(); // Swipe Right -> Prev
+        }, { passive: true });
+    }
+
+    // Attach click listener for plant cards to trigger Lightbox across visible cards
+    document.addEventListener('click', e => {
+        const cardImg = e.target.closest('.plant-card-img img, .gallery-item img, .masonry-item img, .landscape-card img');
+        if (cardImg) {
+            const visibleImgs = Array.from(document.querySelectorAll('.plant-card:not([style*="display: none"]) .plant-card-img img, .gallery-item img, .masonry-item img, .landscape-card img'));
+            const srcs = visibleImgs.map(img => img.src);
+            const idx = visibleImgs.indexOf(cardImg);
+            openLightbox(cardImg.src, srcs, idx !== -1 ? idx : 0);
         }
-      });
-    });
-  });
-
-  // URL tab parameter check on page load
-  const urlParams = new URLSearchParams(window.location.search);
-  const tabParam = urlParams.get('tab');
-  if (tabParam) {
-    const targetBtn = document.querySelector(`.gallery-tab-btn[data-tab="${tabParam}"]`);
-    if (targetBtn) {
-      setTimeout(() => {
-        targetBtn.click();
-      }, 100);
-    }
-  }
-
-  // Videos play/pause toggle triggers
-  document.querySelectorAll('.video-card').forEach(card => {
-    const video = card.querySelector('video');
-    const overlay = card.querySelector('.video-overlay');
-
-    if (!video || !overlay) return;
-
-    overlay.addEventListener('click', () => {
-      // Pause all other playing videos first
-      videos.forEach(v => {
-        if (v !== video) {
-          v.pause();
-          const otherCard = v.closest('.video-card');
-          if (otherCard) otherCard.classList.remove('playing');
-        }
-      });
-
-      video.play();
-      card.classList.add('playing');
     });
 
-    video.addEventListener('click', () => {
-      if (!video.paused) {
-        video.pause();
-        card.classList.remove('playing');
-      }
-    });
+    // ===== SCROLL ENTRANCE ANIMATIONS =====
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const d = getComputedStyle(entry.target).getPropertyValue('--delay') || '0s';
+                const sd = getComputedStyle(entry.target).getPropertyValue('--split-delay') || '0s';
+                const delay = Math.max(parseFloat(d), parseFloat(sd)) * 1000;
+                setTimeout(() => entry.target.classList.add('visible'), delay || 0);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { rootMargin: '0px 0px -40px 0px', threshold: 0.08 });
 
-    video.addEventListener('pause', () => {
-      card.classList.remove('playing');
-    });
-  });
-}
+    document.querySelectorAll('.anim-up, .anim-left, .anim-right, .anim-split').forEach(el => observer.observe(el));
 
-/* ==========================================
-   7. ENQUIRY FORM CLIENT-SIDE SUBMISSION
-   ========================================== */
-function initEnquiryForm() {
-  const form = document.getElementById('enquiryForm');
-  const feedback = document.getElementById('formFeedback');
-
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    // Perform basic client-side check
-    const name = document.getElementById('formName').value.trim();
-    const phone = document.getElementById('formPhone').value.trim();
-    const email = document.getElementById('formEmail').value.trim();
-
-    if (!name || !phone) {
-      alert('Please fill in your Name and Phone Number.');
-      return;
+    // ===== FORMS SUBMISSION =====
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', e => {
+            e.preventDefault();
+            const name = document.getElementById('formName') ? document.getElementById('formName').value : '';
+            const email = document.getElementById('formEmail') ? document.getElementById('formEmail').value : '';
+            const mobile = document.getElementById('formMobile') ? document.getElementById('formMobile').value : '';
+            const message = document.getElementById('formMessage') ? document.getElementById('formMessage').value : '';
+            const text = encodeURIComponent(`Hello Kadiyam Plants Gallery!\n\nName: ${name}\nEmail: ${email}\nMobile: ${mobile}\nMessage: ${message}`);
+            window.open(`https://wa.me/917207755335?text=${text}`, '_blank');
+            contactForm.reset();
+        });
     }
 
-    // Success response trigger
-    if (feedback) {
-      form.style.display = 'none';
-      feedback.style.display = 'block';
-      feedback.innerHTML = `
-        <i class="fas fa-check-circle" style="font-size: 2.2rem; color: #52b788; display: block; margin-bottom: 12px;"></i>
-        <h4>Thank you, ${name}!</h4>
-        <p style="font-size: 0.9rem; margin-top: 5px; color: #4b5563;">Your enquiry has been successfully received. Our gardening expert will contact you soon on <strong>${phone}</strong>.</p>
-      `;
+    const enquiryForm = document.getElementById('enquiryForm');
+    if (enquiryForm) {
+        enquiryForm.addEventListener('submit', e => {
+            e.preventDefault();
+            const name = document.getElementById('formName') ? document.getElementById('formName').value : '';
+            const phone = document.getElementById('formPhone') ? document.getElementById('formPhone').value : '';
+            const email = document.getElementById('formEmail') ? document.getElementById('formEmail').value : '';
+            const topic = document.getElementById('formSubject') ? document.getElementById('formSubject').value : '';
+            const message = document.getElementById('formMessage') ? document.getElementById('formMessage').value : '';
+            const text = encodeURIComponent(`Hello Kadiyam Plants Gallery!\n\nEnquiry Topic: ${topic}\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nRequirement: ${message}`);
+            window.open(`https://wa.me/917207755335?text=${text}`, '_blank');
+            enquiryForm.reset();
+        });
     }
-  });
-}
+
+    // ===== SMOOTH SCROLL =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+            }
+        });
+    });
+
+});

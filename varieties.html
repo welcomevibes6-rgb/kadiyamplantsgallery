@@ -1,1239 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore our extensive catalog of premium nursery varieties including Outdoor, Bougainvillea, Avenue trees, Border shrubs, Flowering, Fruit, and Ficus plants at Kadiyam Plants Gallery.">
-  <title>Plant Catalog & Varieties | Kadiyam Plants Gallery</title>
-  
-  <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Local Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Catalog & Varieties | Kadiyam Plants Gallery</title>
+    <meta name="description" content="Explore our extensive catalog of premium nursery varieties including Outdoor, Bougainvillea, Avenue trees, Border shrubs, Flowering, Fruit, and Ficus plants at Kadiyam Plants Gallery.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Floating Social Actions -->
-  <div class="floating-actions">
-    <a href="https://wa.me/917207755335" target="_blank" class="float-btn whatsapp" aria-label="Chat on WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="tel:7207755335" class="float-btn phone" aria-label="Call Us">
-      <i class="fas fa-phone-alt"></i>
-    </a>
-    <a href="https://www.instagram.com/kadiyam_plants_gallery" target="_blank" class="float-btn instagram" aria-label="Follow on Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </div>
-
-  <!-- Top Contact Bar -->
-  <div class="top-bar">
-    <div class="container top-bar-content">
-      <div class="top-bar-contact">
-        <a href="mailto:kadiyamplantsgallery@gmail.com"><i class="fas fa-envelope"></i> kadiyamplantsgallery@gmail.com</a>
-        <a href="tel:7207755335"><i class="fas fa-phone-alt"></i> 7207755335</a>
-        <a href="https://wa.me/917207755335" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-      </div>
-      <div class="top-bar-socials">
-        <a href="https://www.instagram.com/kadiyam_plants_gallery" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://share.google/ORdUQ8QDstT3n8Wep" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
-      </div>
+<!-- ===== TOP BAR ===== -->
+<div class="top-bar">
+    <div class="container top-bar-inner">
+        <div class="top-bar-left">
+            <a href="mailto:kadiyamplantsgallery@gmail.com"><i class="fas fa-envelope"></i> kadiyamplantsgallery@gmail.com</a>
+        </div>
+        <div class="top-bar-right">
+            <a href="tel:+917207755335"><i class="fas fa-phone-alt"></i> 7207755335</a>
+            <a href="https://www.instagram.com/kadiyam_plants_gallery?igsh=MWoxNXk2am1xbWY4YQ==" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://wa.me/917207755335" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
     </div>
-  </div>
+</div>
 
-  <!-- Sticky Navbar -->
-  <header>
-    <div class="container navbar">
-      <a href="index.html" class="logo-container">
-        <img src="images/logo.png" alt="Kadiyam Plants Gallery Tree Logo" class="logo-img">
-        <div class="brand-name">
-          Kadiyam Plants Gallery
-          <span>Nursery & Landscaping</span>
-        </div>
-      </a>
-      
-      <div class="menu-toggle" id="menuToggle">
-        <i class="fas fa-bars"></i>
-      </div>
-      
-      <ul class="nav-links" id="navLinks">
-        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-        <li class="nav-item">
-          <a href="varieties.html" class="nav-link active">Plant Varieties <i class="fas fa-chevron-down"></i></a>
-          <ul class="dropdown-menu">
-            <li class="dropdown-item"><a href="varieties.html?category=outdoor">Outdoor Plants</a></li>
-            <li class="dropdown-item"><a href="varieties.html?category=flowering">Flowering Plants</a></li>
-            <li class="dropdown-item"><a href="varieties.html?category=ficus">Ficus Plants</a></li>
-            <li class="dropdown-item"><a href="varieties.html?category=fruit">Fruit Plants</a></li>
-            <li class="dropdown-item"><a href="varieties.html?category=avenue">Avenue Plants</a></li>
-            <li class="dropdown-item"><a href="varieties.html?category=border">Border Plants</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a href="landscaping.html" class="nav-link">Landscaping Services</a></li>
-        <li class="nav-item">
-          <a href="gallery.html" class="nav-link">Gallery <i class="fas fa-chevron-down"></i></a>
-          <ul class="dropdown-menu">
-            <li class="dropdown-item"><a href="gallery.html?tab=photos">Photos</a></li>
-            <li class="dropdown-item"><a href="gallery.html?tab=videos">Videos</a></li>
-            <li class="dropdown-item"><a href="gallery.html?tab=loading">Loading Plants</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <!-- Subpage Hero Band -->
-  <section class="subpage-hero" style="background-image: linear-gradient(rgba(13, 44, 29, 0.75), rgba(13, 44, 29, 0.75)), url('images/121.png');">
-    <h1 class="subpage-hero-title letter-reveal">Our Plants Collection</h1>
-  </section>
-
-  <!-- Plant Catalog Section -->
-  <section class="section-padding" style="background-color: var(--color-cream);">
-    <div class="container">
-      
-      <!-- Category Filter Tabs -->
-      <div class="filter-tabs-container reveal reveal-fade">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="outdoor">Outdoor Plants</button>
-        <button class="filter-btn" data-filter="bougainvillea">Bougainvillea</button>
-        <button class="filter-btn" data-filter="avenue">Avenue Plants</button>
-        <button class="filter-btn" data-filter="border">Border Plants</button>
-        <button class="filter-btn" data-filter="flowering">Flowering Plants</button>
-        <button class="filter-btn" data-filter="fruit">Fruit Plants</button>
-        <button class="filter-btn" data-filter="ficus">Ficus Plants</button>
-      </div>
-
-      <!-- Plants Grid (Uniform 4-column display) -->
-      <div class="plants-grid">
-
-        <!-- --- OUTDOOR PLANTS (97.png to 111.png) --- -->
-        <!-- Card 97 -->
-        <div class="plant-card reveal reveal-up" data-category="outdoor">
-          <div class="plant-card-img"><img src="images/97.png" alt="Golden Palm Leaf" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Outdoor</span>
-            <h3>Areca Palm</h3>
-            <p>Popular tropical house plant that adds a lush decorative statement to driveways.</p>
-          </div>
-        </div>
-        <!-- Card 98 -->
-        <div class="plant-card reveal reveal-up" data-category="outdoor">
-          <div class="plant-card-img"><img src="images/98.png" alt="Cycas Palm" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Outdoor</span>
-            <h3>Cycas Palm</h3>
-            <p>Ancient evergreen palm-like shrub with a strong symmetrical woody trunk.</p>
-          </div>
-        </div>
-        <!-- Card 99 -->
-        <div class="plant-card" data-category="outdoor">
-          <div class="plant-card-img"><img src="images/99.png" alt="Foxtail Palm" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Outdoor</span>
-            <h3>Foxtail Palm</h3>
-            <p>Fast-growing majestic palm characterized by its brush-like frond canopy.</p>
-          </div>
-        </div>
-        <!-- Card 100 -->
-        <div class="plant-card" data-category="outdoor">
-          <div class="plant-card-img"><img src="images/100.png" alt="Yucca Variegated" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Outdoor</span>
-            <h3>Yucca Plant</h3>
-            <p>Hardy rosette foliage with sword-like pointed leaves, highly drought tolerant.</p>
-          </div>
-        </div>
-        <!-- Card 101 -->
-        <div class="plant-card" data-category="outdoor">
-          <div class="plant-card-img"><img src="images/101.png" alt="Golden Bamboo" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Outdoor</span>
-            <h3>Golden Bamboo</h3>
-            <p>Highly aesthetic clump-forming bamboo with vibrant yellow-green canes.</p>
-          </div>
-        </div>
-        <!-- Card 102 -->
-        <div class="plant-card" data-category="outdoor">
-          <div class="plant-card-img"><img src="images/102.png" alt="Ravenala Madagascariensis" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Outdoor</span>
-            <h3>Traveler's Palm</h3>
-            <p>Grand banana-like fan leaf design that serves as a premium garden divider.</p>
-          </div>
-        </div>
-        <!-- Card 103 -->
-        <div class="plant-card" data-category="outdoor">
-          <div class="plant-card-img"><img src="images/103.png" alt="Bismarckia Palm" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Outdoor</span>
-            <h3>Bismarck Palm</h3>
-            <p>Huge fan-shaped silver-blue fronds. Highly premium focal palm tree.</p>
-          </div>
-        </div>
-        <!-- Card 104 -->
-        <div class="plant-card" data-category="outdoor">
-          <div class="plant-card-img"><img src="images/104.png" alt="Dracaena Colorama" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Outdoor</span>
-            <h3>Dracaena Colorama</h3>
-            <p>Slender foliage with bright red-pink borders to inject vibrant contrast color.</p>
-          </div>
-        </div>
-        <!-- Card 105 -->
-        <div class="plant-card" data-category="outdoor">
-          <div class="plant-card-img"><img src="images/105.png" alt="Cordyline Red Star" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Outdoor</span>
-            <h3>Cordyline Red</h3>
-            <p>Stunning dark burgundy spear leaves, ideal for rock gardens and accent pots.</p>
-          </div>
-        </div>
-        <!-- Card 106 -->
-        <div class="plant-card" data-category="outdoor">
-          <div class="plant-card-img"><img src="images/106.png" alt="Monstera Deliciosa" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Outdoor</span>
-            <h3>Monstera Deliciosa</h3>
-            <p>Exotic split-leaf creeper, perfect for shaded patios or courtyard corners.</p>
-          </div>
-        </div>
-        <!-- Card 107 -->
-        <div class="plant-card" data-category="outdoor">
-          <div class="plant-card-img"><img src="images/107.png" alt="Philodendron Xanadu" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Outdoor</span>
-            <h3>Philodendron Xanadu</h3>
-            <p>Sprawling lobes that create dense, deep green groundcover patches.</p>
-          </div>
-        </div>
-        <!-- Card 108 -->
-        <div class="plant-card" data-category="outdoor">
-          <div class="plant-card-img"><img src="images/108.png" alt="Exotic Agave" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Outdoor</span>
-            <h3>Century Agave</h3>
-            <p>Striking architectural succulent form, excellent for xeriscaping.</p>
-          </div>
-        </div>
-        <!-- Card 109 -->
-        <div class="plant-card" data-category="outdoor">
-          <div class="plant-card-img"><img src="images/109.png" alt="Croton Gold Dust" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Outdoor</span>
-            <h3>Gold Dust Croton</h3>
-            <p>Vibrant yellow-speckled lanceolate leaves that stand out under moderate light.</p>
-          </div>
-        </div>
-        <!-- Card 110 -->
-        <div class="plant-card" data-category="outdoor">
-          <div class="plant-card-img"><img src="images/110.png" alt="Plumeria Pudica" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Outdoor</span>
-            <h3>Plumeria Shrub</h3>
-            <p>Spoon-shaped leaves with dense white cluster blooms, highly decorative.</p>
-          </div>
-        </div>
-        <!-- Card 111 -->
-        <div class="plant-card" data-category="outdoor">
-          <div class="plant-card-img"><img src="images/111.png" alt="Pedilanthus Tithymaloides" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Outdoor</span>
-            <h3>Zigzag Plant</h3>
-            <p>Architectural green stems with unique variegated leaves, loves bright spots.</p>
-          </div>
-        </div>
-
-
-        <!-- --- BOUGAINVILLEA PLANTS (image copy.png, image.png, image copy 2.png - 14.png) --- -->
-        <!-- Card BC1 -->
-        <div class="plant-card" data-category="bougainvillea">
-          <div class="plant-card-img"><img src="images/image copy.png" alt="Bougainvillea Glabra" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Bougainvillea</span>
-            <h3>Purple Paperflower</h3>
-            <p>Lush climber with papery purple bracts that bloom profusely under full sun.</p>
-          </div>
-        </div>
-        <!-- Card BC2 -->
-        <div class="plant-card" data-category="bougainvillea">
-          <div class="plant-card-img"><img src="images/image.png" alt="Bougainvillea Red" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Bougainvillea</span>
-            <h3>Scarlet Bougainvillea</h3>
-            <p>Deep rich crimson red blooms, excellent for pergolas and boundary wall cascades.</p>
-          </div>
-        </div>
-        <!-- Card BC3 -->
-        <div class="plant-card" data-category="bougainvillea">
-          <div class="plant-card-img"><img src="images/image copy 2.png" alt="Bougainvillea Gold" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Bougainvillea</span>
-            <h3>Sunset Gold Bloom</h3>
-            <p>Elegant orange-gold flowers that shift tones throughout the flowering seasons.</p>
-          </div>
-        </div>
-        <!-- Card BC4 -->
-        <div class="plant-card" data-category="bougainvillea">
-          <div class="plant-card-img"><img src="images/image copy 3.png" alt="Bougainvillea White" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Bougainvillea</span>
-            <h3>Pure White Bougainvillea</h3>
-            <p>Delicate snow-white clusters, creating clean botanical accents in modern designs.</p>
-          </div>
-        </div>
-        <!-- Card BC5 -->
-        <div class="plant-card" data-category="bougainvillea">
-          <div class="plant-card-img"><img src="images/image copy 4.png" alt="Bougainvillea Pink" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Bougainvillea</span>
-            <h3>Dwarf Pink Shrub</h3>
-            <p>Compact bonsai-ready variety with clusters of bright candy pink petals.</p>
-          </div>
-        </div>
-        <!-- Card BC6 -->
-        <div class="plant-card" data-category="bougainvillea">
-          <div class="plant-card-img"><img src="images/image copy 5.png" alt="Bougainvillea Orange" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Bougainvillea</span>
-            <h3>Tangerine Climber</h3>
-            <p>Fierce orange petals that thrive with minimal water, scaling walls gracefully.</p>
-          </div>
-        </div>
-        <!-- Card BC7 -->
-        <div class="plant-card" data-category="bougainvillea">
-          <div class="plant-card-img"><img src="images/image copy 6.png" alt="Bougainvillea Multi" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Bougainvillea</span>
-            <h3>Grafted Multi-Color</h3>
-            <p>Unique single plant displaying purple, pink, and white blossoms simultaneously.</p>
-          </div>
-        </div>
-        <!-- Card BC8 -->
-        <div class="plant-card" data-category="bougainvillea">
-          <div class="plant-card-img"><img src="images/image copy 7.png" alt="Bougainvillea Variegated" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Bougainvillea</span>
-            <h3>Variegated Leaf Bougainvillea</h3>
-            <p>Beautiful cream-striped foliage that remains ornamental even out of bloom.</p>
-          </div>
-        </div>
-        <!-- Card BC9 -->
-        <div class="plant-card" data-category="bougainvillea">
-          <div class="plant-card-img"><img src="images/image copy 8.png" alt="Bougainvillea Standard" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Bougainvillea</span>
-            <h3>Topiary Tree Standard</h3>
-            <p>Grown as a neat ornamental lollipop standard tree, perfect for entrances.</p>
-          </div>
-        </div>
-        <!-- Card BC10 -->
-        <div class="plant-card" data-category="bougainvillea">
-          <div class="plant-card-img"><img src="images/image copy 9.png" alt="Bougainvillea Climber" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Bougainvillea</span>
-            <h3>Deep Rose Pink</h3>
-            <p>Aggressive climber featuring large deep rose flowers, excellent privacy cover.</p>
-          </div>
-        </div>
-        <!-- Card BC11 -->
-        <div class="plant-card" data-category="bougainvillea">
-          <div class="plant-card-img"><img src="images/image copy 10.png" alt="Bougainvillea Ruby" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Bougainvillea</span>
-            <h3>Ruby Red Arch</h3>
-            <p>Vigorous arch climber loaded with stunning scarlet-ruby petals.</p>
-          </div>
-        </div>
-        <!-- Card BC12 -->
-        <div class="plant-card" data-category="bougainvillea">
-          <div class="plant-card-img"><img src="images/image copy 11.png" alt="Bougainvillea Lavender" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Bougainvillea</span>
-            <h3>Lavender Mist</h3>
-            <p>Gentle lavender hue, adds a serene, classic color element to cottage gardens.</p>
-          </div>
-        </div>
-        <!-- Card BC13 -->
-        <div class="plant-card" data-category="bougainvillea">
-          <div class="plant-card-img"><img src="images/image copy 12.png" alt="Bougainvillea Coral" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Bougainvillea</span>
-            <h3>Coral Sunset</h3>
-            <p>Warm coral-peach tones that flourish with full sun exposure and dry roots.</p>
-          </div>
-        </div>
-        <!-- Card BC14 -->
-        <div class="plant-card" data-category="bougainvillea">
-          <div class="plant-card-img"><img src="images/image copy 13.png" alt="Bougainvillea Magenta" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Bougainvillea</span>
-            <h3>Imperial Magenta</h3>
-            <p>Extremely dense, dark magenta clusters that cover the entire foliage frame.</p>
-          </div>
-        </div>
-        <!-- Card BC15 -->
-        <div class="plant-card" data-category="bougainvillea">
-          <div class="plant-card-img"><img src="images/image copy 14.png" alt="Bougainvillea Raspberry" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Bougainvillea</span>
-            <h3>Raspberry Ice</h3>
-            <p>Variegated leaves with raspberry bracts. A premium container plant variety.</p>
-          </div>
-        </div>
-
-
-        <!-- --- AVENUE PLANTS (85.png to 96.png) --- -->
-        <!-- Card AV1 -->
-        <div class="plant-card" data-category="avenue">
-          <div class="plant-card-img"><img src="images/85.png" alt="Conocarpus Erectus" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Avenue</span>
-            <h3>Conocarpus Erectus</h3>
-            <p>Robust buttonwood canopy tree, extremely resistant to high wind and salt spray.</p>
-          </div>
-        </div>
-        <!-- Card AV2 -->
-        <div class="plant-card" data-category="avenue">
-          <div class="plant-card-img"><img src="images/86.png" alt="Tabebuia Rosea" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Avenue</span>
-            <h3>Pink Trumpet Tree</h3>
-            <p>Stunning pink blossoms that blanket the tree trunk in early spring.</p>
-          </div>
-        </div>
-        <!-- Card AV3 -->
-        <div class="plant-card" data-category="avenue">
-          <div class="plant-card-img"><img src="images/87.png" alt="Peltophorum Pterocarpum" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Avenue</span>
-            <h3>Yellow Flamboyant</h3>
-            <p>Grand shade tree featuring bright yellow flower clusters, loves road margins.</p>
-          </div>
-        </div>
-        <!-- Card AV4 -->
-        <div class="plant-card" data-category="avenue">
-          <div class="plant-card-img"><img src="images/88.png" alt="Royal Poinciana" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Avenue</span>
-            <h3>Gulmohar Tree</h3>
-            <p>Magnificent fiery orange-red flower canopy, iconic avenue tree.</p>
-          </div>
-        </div>
-        <!-- Card AV5 -->
-        <div class="plant-card" data-category="avenue">
-          <div class="plant-card-img"><img src="images/89.png" alt="Monoon Longifolium" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Avenue</span>
-            <h3>Ashoka Pillar</h3>
-            <p>Elegant, vertically tall symmetrical tree used for structural column landscaping.</p>
-          </div>
-        </div>
-        <!-- Card AV6 -->
-        <div class="plant-card" data-category="avenue">
-          <div class="plant-card-img"><img src="images/90.png" alt="Neem Tree" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Avenue</span>
-            <h3>Azadirachta Indica</h3>
-            <p>Hardy botanical species offering thick shade canopy and strong herbal values.</p>
-          </div>
-        </div>
-        <!-- Card AV7 -->
-        <div class="plant-card" data-category="avenue">
-          <div class="plant-card-img"><img src="images/91.png" alt="Terminalia Mantaly" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Avenue</span>
-            <h3>Madagascar Almond</h3>
-            <p>Elegant tiered branches spreading horizontally in neat uniform green layers.</p>
-          </div>
-        </div>
-        <!-- Card AV8 -->
-        <div class="plant-card" data-category="avenue">
-          <div class="plant-card-img"><img src="images/92.png" alt="Alstonia Scholaris" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Avenue</span>
-            <h3>Devil's Tree</h3>
-            <p>Evergreen tall foliage with beautiful whorled leaves, thrives across soils.</p>
-          </div>
-        </div>
-        <!-- Card AV9 -->
-        <div class="plant-card" data-category="avenue">
-          <div class="plant-card-img"><img src="images/93.png" alt="Ficus Benjamina tree" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Avenue</span>
-            <h3>Weeping Fig Tree</h3>
-            <p>Large weeping branch canopy that forms a beautiful shade corridor.</p>
-          </div>
-        </div>
-        <!-- Card AV10 -->
-        <div class="plant-card" data-category="avenue">
-          <div class="plant-card-img"><img src="images/94.png" alt="Cassia Fistula" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Avenue</span>
-            <h3>Golden Shower Tree</h3>
-            <p>Showstopping native Indian tree with cascading golden-yellow flower clusters.</p>
-          </div>
-        </div>
-        <!-- Card AV11 -->
-        <div class="plant-card" data-category="avenue">
-          <div class="plant-card-img"><img src="images/95.png" alt="Spathodea Campanulata" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Avenue</span>
-            <h3>African Tulip Tree</h3>
-            <p>Large cup-shaped orange-scarlet flowers that bloom continuously.</p>
-          </div>
-        </div>
-        <!-- Card AV12 -->
-        <div class="plant-card" data-category="avenue">
-          <div class="plant-card-img"><img src="images/96.png" alt="Bauhinia Variegata" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Avenue</span>
-            <h3>Kachnar Tree</h3>
-            <p>Orchid-like white and purple blooms, ideal for narrow city lanes.</p>
-          </div>
-        </div>
-
-
-        <!-- --- BORDER PLANTS (image copy 60.png to 67.png) --- -->
-        <!-- Card BD1 -->
-        <div class="plant-card" data-category="border">
-          <div class="plant-card-img"><img src="images/image copy 60.png" alt="Border Shrubs 1" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Border</span>
-            <h3>Golden Duranta</h3>
-            <p>Lush yellow-green borders, easily sheared into neat geometric hedge rows.</p>
-          </div>
-        </div>
-        <!-- Card BD2 -->
-        <div class="plant-card" data-category="border">
-          <div class="plant-card-img"><img src="images/image copy 61.png" alt="Border Shrubs 2" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Border</span>
-            <h3>Tecoma Capensis</h3>
-            <p>Dwarf shrub featuring orange trumpet tubular blooms. Great edge plant.</p>
-          </div>
-        </div>
-        <!-- Card BD3 -->
-        <div class="plant-card" data-category="border">
-          <div class="plant-card-img"><img src="images/image copy 62.png" alt="Border Shrubs 3" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Border</span>
-            <h3>Alternanthera Red</h3>
-            <p>Beautiful dark red-purple ground foliage that outlines flower beds perfectly.</p>
-          </div>
-        </div>
-        <!-- Card BD4 -->
-        <div class="plant-card" data-category="border">
-          <div class="plant-card-img"><img src="images/image copy 63.png" alt="Border Shrubs 4" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Border</span>
-            <h3>Acalypha Marginata</h3>
-            <p>Variegated leaves trimmed with bright copper margins. Adds sharp lines.</p>
-          </div>
-        </div>
-        <!-- Card BD5 -->
-        <div class="plant-card" data-category="border">
-          <div class="plant-card-img"><img src="images/image copy 64.png" alt="Border Shrubs 5" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Border</span>
-            <h3>Ophiopogon Grass</h3>
-            <p>Classic dark green Mondo Grass, forms a clean evergreen border line.</p>
-          </div>
-        </div>
-        <!-- Card BD6 -->
-        <div class="plant-card" data-category="border">
-          <div class="plant-card-img"><img src="images/image copy 65.png" alt="Border Shrubs 6" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Border</span>
-            <h3>Iresine Herbstii</h3>
-            <p>Vibrant bloodleaf pink stems, adds striking visual boundaries.</p>
-          </div>
-        </div>
-        <!-- Card BD7 -->
-        <div class="plant-card" data-category="border">
-          <div class="plant-card-img"><img src="images/image copy 66.png" alt="Border Shrubs 7" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Border</span>
-            <h3>Clerodendrum Inerme</h3>
-            <p>Extremely hardy green hedge shrub, highly resistant to grazing cattle.</p>
-          </div>
-        </div>
-        <!-- Card BD8 -->
-        <div class="plant-card" data-category="border">
-          <div class="plant-card-img"><img src="images/image copy 67.png" alt="Border Shrubs 8" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Border</span>
-            <h3>Pedilanthus Dwarf</h3>
-            <p>Variegated dwarf succulent hedge, ideal for pathway guidelines.</p>
-          </div>
-        </div>
-
-
-        <!-- --- FRUIT PLANTS (33.png to 60.png) --- -->
-        <!-- Card FR1 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/33.png" alt="Mangifera Indica" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Grafted Mango (Banganapalli)</h3>
-            <p>High-yield sweet dessert mango variety, ideal for backyards.</p>
-          </div>
-        </div>
-        <!-- Card FR2 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/34.png" alt="Psidium Guajava" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Guava L-49</h3>
-            <p>Producers of large, round white flesh guava fruits with thin skin.</p>
-          </div>
-        </div>
-        <!-- Card FR3 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/35.png" alt="Punica Granatum" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Bhagwa Pomegranate</h3>
-            <p>Soft-seeded deep red arils, highly rich in antioxidants.</p>
-          </div>
-        </div>
-        <!-- Card FR4 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/36.png" alt="Citrus Limon" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Kagzi Lemon</h3>
-            <p>Juicy seedless lime variety blooming all year round.</p>
-          </div>
-        </div>
-        <!-- Card FR5 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/37.png" alt="Syzygium Cumini" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Jamun (Black Plum)</h3>
-            <p>Premium local fruit with massive sweet purple berries.</p>
-          </div>
-        </div>
-        <!-- Card FR6 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/38.png" alt="Achras Sapota" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Grafted Sapota (Chiku)</h3>
-            <p>Kalipatti sweet chiku variety, thrives with light irrigation.</p>
-          </div>
-        </div>
-        <!-- Card FR7 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/39.png" alt="Carica Papaya" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Red Lady Papaya</h3>
-            <p>Dwarf high-bearing sweet orange flesh papaya sapling.</p>
-          </div>
-        </div>
-        <!-- Card FR8 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/40.png" alt="Citrus Sinensis" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Sweet Orange (Mosambi)</h3>
-            <p>Thick juice orange variety, perfect for warm home orchards.</p>
-          </div>
-        </div>
-        <!-- Card FR9 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/41.png" alt="Artocarpus Heterophyllus" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Singapore Jackfruit</h3>
-            <p>Precocious fruiting variety offering crunchy yellow bulbs.</p>
-          </div>
-        </div>
-        <!-- Card FR10 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/42.png" alt="Emblica Officinalis" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Amla (Indian Gooseberry)</h3>
-            <p>Rich source of vitamin C. Grows into a highly hardy garden tree.</p>
-          </div>
-        </div>
-        <!-- Card FR11 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/43.png" alt="Moringa Oleifera" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>PKM-1 Drumstick</h3>
-            <p>Rapid growing vegetable tree offering delicious high-nutrient pods.</p>
-          </div>
-        </div>
-        <!-- Card FR12 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/44.png" alt="Annona Squamosa" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Custard Apple (Sitaphal)</h3>
-            <p>Golden yellow fleshed fruit sapling, yields heavily in dry soils.</p>
-          </div>
-        </div>
-        <!-- Card FR13 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/45.png" alt="Cocos Nucifera" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Grafted Dwarf Coconut</h3>
-            <p>Yields sweet water coconuts in just 3-4 years. Compact height.</p>
-          </div>
-        </div>
-        <!-- Card FR14 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/46.png" alt="Syzygium Samarangense" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Water Apple Pink</h3>
-            <p>Highly aesthetic bell-shaped pink fruits with crisp watery texture.</p>
-          </div>
-        </div>
-        <!-- Card FR15 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/47.png" alt="Water Apple Red" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Water Apple Red</h3>
-            <p>Stunning dark red crispy fruit variety. Very juicy.</p>
-          </div>
-        </div>
-        <!-- Card FR16 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/48.png" alt="Tamarindus Indica" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Sweet Tamarind</h3>
-            <p>Grafted variety from Thailand, sweet pulp pods, evergreen canopy.</p>
-          </div>
-        </div>
-        <!-- Card FR17 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/49.png" alt="Ziziphus Mauritiana" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Apple Ber (Kashmiri)</h3>
-            <p>Delicious round jujube fruits with sweet apple texture.</p>
-          </div>
-        </div>
-        <!-- Card FR18 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/50.png" alt="Musa Acuminata" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Grand Naine Banana</h3>
-            <p>Premium tissue-culture banana sapling with large heavy bunches.</p>
-          </div>
-        </div>
-        <!-- Card FR19 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/51.png" alt="Aegle Marmelos" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Bael Fruit (Wood Apple)</h3>
-            <p>Traditional sacred fruit with strong medical values, hard shell.</p>
-          </div>
-        </div>
-        <!-- Card FR20 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/52.png" alt="Ficus Carica" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Poona Fig (Anjeer)</h3>
-            <p>Delicious red-purple fleshy figs, bears heavy fruit in patio pots.</p>
-          </div>
-        </div>
-        <!-- Card FR21 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/53.png" alt="Grewia Asiatica" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Phalsa Berry</h3>
-            <p>Shrub-like growth loaded with small tangy sweet purple berries.</p>
-          </div>
-        </div>
-        <!-- Card FR22 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/54.png" alt="Manilkara Hexandra" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Khirni Fruit</h3>
-            <p>Slow-growing native wild tree, yields sweet yellow berries.</p>
-          </div>
-        </div>
-        <!-- Card FR23 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/55.png" alt="Spondias Dulcis" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Ambarella (Hog Plum)</h3>
-            <p>Juicy golden yellow fruit with sour-sweet taste, great for pickles.</p>
-          </div>
-        </div>
-        <!-- Card FR24 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/56.png" alt="Garcinia Indica" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Kokum Fruit</h3>
-            <p>Forest tree yielding dark purple fruits used for delicious summer drinks.</p>
-          </div>
-        </div>
-        <!-- Card FR25 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/57.png" alt="Passiflora Edulis" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Passion Fruit Climber</h3>
-            <p>Fragrant climber loaded with nutritious sweet tropical fruits.</p>
-          </div>
-        </div>
-        <!-- Card FR26 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/58.png" alt="Moras Alba" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Mulberry Long Red</h3>
-            <p>Cascading vines producing long, sweet cylindrical mulberries.</p>
-          </div>
-        </div>
-        <!-- Card FR27 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/59.png" alt="Averrhoa Carambola" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Star Fruit (Kamrakh)</h3>
-            <p>Aesthetic star-shaped sour-sweet yellow juicy fruit variety.</p>
-          </div>
-        </div>
-        <!-- Card FR28 -->
-        <div class="plant-card" data-category="fruit">
-          <div class="plant-card-img"><img src="images/60.png" alt="Syzygium Jambos" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Fruit</span>
-            <h3>Rose Apple (White)</h3>
-            <p>Unique bell fruit with light rose fragrance, highly decorative tree.</p>
-          </div>
-        </div>
-
-
-        <!-- --- FICUS PLANTS (68.png to 84.png) --- -->
-        <!-- Card FC1 -->
-        <div class="plant-card" data-category="ficus">
-          <div class="plant-card-img"><img src="images/68.png" alt="Ficus Microcarpa" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Ficus</span>
-            <h3>Ficus Microcarpa</h3>
-            <p>Dense canopy tree standard, highly suited for parkways and boundary lining.</p>
-          </div>
-        </div>
-        <!-- Card FC2 -->
-        <div class="plant-card" data-category="ficus">
-          <div class="plant-card-img"><img src="images/69.png" alt="Ficus Benjamina" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Ficus</span>
-            <h3>Weeping Fig</h3>
-            <p>Graceful drooping leaves with white-green variegation, highly aesthetic.</p>
-          </div>
-        </div>
-        <!-- Card FC3 -->
-        <div class="plant-card" data-category="ficus">
-          <div class="plant-card-img"><img src="images/70.png" alt="Ficus Nitida" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Ficus</span>
-            <h3>Ficus Nitida Column</h3>
-            <p>Cylindrical dense green tower ficus, excellent for privacy hedge lines.</p>
-          </div>
-        </div>
-        <!-- Card FC4 -->
-        <div class="plant-card" data-category="ficus">
-          <div class="plant-card-img"><img src="images/71.png" alt="Ficus Panda" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Ficus</span>
-            <h3>Ficus Panda Ball</h3>
-            <p>Thick round leaves pruned into beautiful spherical garden ball sculptures.</p>
-          </div>
-        </div>
-        <!-- Card FC5 -->
-        <div class="plant-card" data-category="ficus">
-          <div class="plant-card-img"><img src="images/72.png" alt="Ficus Black" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Ficus</span>
-            <h3>Ficus Black Prince</h3>
-            <p>Stunning dark, almost black foliage, provides massive color contrast.</p>
-          </div>
-        </div>
-        <!-- Card FC6 -->
-        <div class="plant-card" data-category="ficus">
-          <div class="plant-card-img"><img src="images/73.png" alt="Ficus Lyrata" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Ficus</span>
-            <h3>Fiddle Leaf Fig</h3>
-            <p>Large violin-shaped premium foliage, highly requested for interior aesthetics.</p>
-          </div>
-        </div>
-        <!-- Card FC7 -->
-        <div class="plant-card" data-category="ficus">
-          <div class="plant-card-img"><img src="images/74.png" alt="Ficus Elastica" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Ficus</span>
-            <h3>Rubber Plant Burgundy</h3>
-            <p>Broad, glossy leathery burgundy leaves. Highly robust and decorative.</p>
-          </div>
-        </div>
-        <!-- Card FC8 -->
-        <div class="plant-card" data-category="ficus">
-          <div class="plant-card-img"><img src="images/75.png" alt="Ficus Prestige" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Ficus</span>
-            <h3>Ficus Prestige Variegated</h3>
-            <p>Silvery margins framing glossy emerald leaves, grows into thick bushes.</p>
-          </div>
-        </div>
-        <!-- Card FC9 -->
-        <div class="plant-card" data-category="ficus">
-          <div class="plant-card-img"><img src="images/76.png" alt="Ficus Bonsai" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Ficus</span>
-            <h3>Grafted Ficus Bonsai</h3>
-            <p>Aged gnarled roots with dense leaf canopies. Premium desktop sculpture.</p>
-          </div>
-        </div>
-        <!-- Card FC10 -->
-        <div class="plant-card" data-category="ficus">
-          <div class="plant-card-img"><img src="images/77.png" alt="Ficus Starlight" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Ficus</span>
-            <h3>Ficus Starlight</h3>
-            <p>Heavily variegated cream leaves, looks like a snow-dusted plant standard.</p>
-          </div>
-        </div>
-        <!-- Card FC11 -->
-        <div class="plant-card" data-category="ficus">
-          <div class="plant-card-img"><img src="images/78.png" alt="Ficus Triangularis" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Ficus</span>
-            <h3>Ficus Triangularis Variegated</h3>
-            <p>Sweet heart-shaped triangular leaves with broad yellow margins.</p>
-          </div>
-        </div>
-        <!-- Card FC12 -->
-        <div class="plant-card" data-category="ficus">
-          <div class="plant-card-img"><img src="images/79.png" alt="Ficus Topiary Cone" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Ficus</span>
-            <h3>Cone Shape Topiary</h3>
-            <p>Ficus trimmed perfectly into geometric cones, ideal for entryway lining.</p>
-          </div>
-        </div>
-        <!-- Card FC13 -->
-        <div class="plant-card" data-category="ficus">
-          <div class="plant-card-img"><img src="images/80.png" alt="Ficus Spiral" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Ficus</span>
-            <h3>Spiral Shape Topiary</h3>
-            <p>Highly skilled trained spiral ficus trunk, adds grand artistic views.</p>
-          </div>
-        </div>
-        <!-- Card FC14 -->
-        <div class="plant-card" data-category="ficus">
-          <div class="plant-card-img"><img src="images/81.png" alt="Ficus Ring" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Ficus</span>
-            <h3>Double Ring Topiary</h3>
-            <p>Stunning double-layered green ring sculpture trained over wire frames.</p>
-          </div>
-        </div>
-        <!-- Card FC15 -->
-        <div class="plant-card" data-category="ficus">
-          <div class="plant-card-img"><img src="images/82.png" alt="Ficus Umbrella" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Ficus</span>
-            <h3>Umbrella Canopy Ficus</h3>
-            <p>Trunk trained to spread horizontally, forming a natural green parasol.</p>
-          </div>
-        </div>
-        <!-- Card FC16 -->
-        <div class="plant-card" data-category="ficus">
-          <div class="plant-card-img"><img src="images/83.png" alt="Ficus Auriculata" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Ficus</span>
-            <h3>Ficus Roxburghii</h3>
-            <p>Broad large round leaves, bears purple figs along the trunk frame.</p>
-          </div>
-        </div>
-        <!-- Card FC17 -->
-        <div class="plant-card" data-category="ficus">
-          <div class="plant-card-img"><img src="images/84.png" alt="Ficus Religiosa" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Ficus</span>
-            <h3>Sacred Fig (Peepal)</h3>
-            <p>Large heart-shaped tail leaves, high oxygen and spiritual values.</p>
-          </div>
-        </div>
-
-
-        <!-- --- FLOWERING PLANTS (15.png to 32.png) --- -->
-        <!-- Card FL1 -->
-        <div class="plant-card" data-category="flowering">
-          <div class="plant-card-img"><img src="images/15.png" alt="Ixora Coccinea" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Flowering</span>
-            <h3>Ixora Red (Rukmini)</h3>
-            <p>Dense clusters of fiery red star-shaped flowers, blooms throughout year.</p>
-          </div>
-        </div>
-        <!-- Card FL2 -->
-        <div class="plant-card" data-category="flowering">
-          <div class="plant-card-img"><img src="images/16.png" alt="Hibiscus Rosa-Sinensis" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Flowering</span>
-            <h3>Hibiscus Red (Shoeblack)</h3>
-            <p>Broad, rich crimson single flower, iconic local garden bloom.</p>
-          </div>
-        </div>
-        <!-- Card FL3 -->
-        <div class="plant-card" data-category="flowering">
-          <div class="plant-card-img"><img src="images/17.png" alt="Allamanda Cathartica" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Flowering</span>
-            <h3>Golden Trumpet Vine</h3>
-            <p>Vibrant golden yellow bell blossoms, excellent for fencing coverage.</p>
-          </div>
-        </div>
-        <!-- Card FL4 -->
-        <div class="plant-card" data-category="flowering">
-          <div class="plant-card-img"><img src="images/18.png" alt="Tecoma Stans" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Flowering</span>
-            <h3>Yellow Elder Bush</h3>
-            <p>Fast-growing woody shrub loaded with bright yellow bell petals.</p>
-          </div>
-        </div>
-        <!-- Card FL5 -->
-        <div class="plant-card" data-category="flowering">
-          <div class="plant-card-img"><img src="images/19.png" alt="Plumeria Rubra" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Flowering</span>
-            <h3>Temple Tree (Frangipani)</h3>
-            <p>Stunning tricolor pink-yellow-white blooms with thick sweet fragrance.</p>
-          </div>
-        </div>
-        <!-- Card FL6 -->
-        <div class="plant-card" data-category="flowering">
-          <div class="plant-card-img"><img src="images/20.png" alt="Jasminum Sambac" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Flowering</span>
-            <h3>Arabian Jasmine (Mogra)</h3>
-            <p>Intensely fragrant snow-white layered blossoms, highly popular shrub.</p>
-          </div>
-        </div>
-        <!-- Card FL7 -->
-        <div class="plant-card" data-category="flowering">
-          <div class="plant-card-img"><img src="images/21.png" alt="Bougainvillea Glabra Flowering" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Flowering</span>
-            <h3>Glabra Magenta Shrub</h3>
-            <p>Thick magenta blossoms, extremely heat resistant edge flowering bush.</p>
-          </div>
-        </div>
-        <!-- Card FL8 -->
-        <div class="plant-card" data-category="flowering">
-          <div class="plant-card-img"><img src="images/22.png" alt="Tabernaemontana Divaricata" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Flowering</span>
-            <h3>Pinwheel Flower (Crape Jasmine)</h3>
-            <p>Pure white pinwheel petal structure, blooms profusely in humid weather.</p>
-          </div>
-        </div>
-        <!-- Card FL9 -->
-        <div class="plant-card" data-category="flowering">
-          <div class="plant-card-img"><img src="images/23.png" alt="Lantana Camara" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Flowering</span>
-            <h3>Lantana Tricolor</h3>
-            <p>Clusters of mixed yellow, orange, and red tiny florets. Attracts butterflies.</p>
-          </div>
-        </div>
-        <!-- Card FL10 -->
-        <div class="plant-card" data-category="flowering">
-          <div class="plant-card-img"><img src="images/24.png" alt="Adenium Obesum" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Flowering</span>
-            <h3>Desert Rose Pink</h3>
-            <p>Bulbous bonsai base with delicate pink-red trumpet blossoms.</p>
-          </div>
-        </div>
-        <!-- Card FL11 -->
-        <div class="plant-card" data-category="flowering">
-          <div class="plant-card-img"><img src="images/25.png" alt="Rosa Indica" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Flowering</span>
-            <h3>Kashmiri Rose</h3>
-            <p>Ever-blooming local rose variety with sweet mild fragrance, rich pink.</p>
-          </div>
-        </div>
-        <!-- Card FL12 -->
-        <div class="plant-card" data-category="flowering">
-          <div class="plant-card-img"><img src="images/26.png" alt="Nerium Oleander" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Flowering</span>
-            <h3>Oleander Pink (Kaner)</h3>
-            <p>Tough, drought-tolerant tall shrub with clusters of beautiful pink petals.</p>
-          </div>
-        </div>
-        <!-- Card FL13 -->
-        <div class="plant-card" data-category="flowering">
-          <div class="plant-card-img"><img src="images/27.png" alt="Caesalpinia Pulcherrima" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Flowering</span>
-            <h3>Peacock Flower</h3>
-            <p>Stunning yellow-orange orchid-like flowers with long red stamens.</p>
-          </div>
-        </div>
-        <!-- Card FL14 -->
-        <div class="plant-card" data-category="flowering">
-          <div class="plant-card-img"><img src="images/28.png" alt="Ruellia Simplex" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Flowering</span>
-            <h3>Mexican Petunia Blue</h3>
-            <p>Slender erect stems loaded with purple-blue trumpet blooms.</p>
-          </div>
-        </div>
-        <!-- Card FL15 -->
-        <div class="plant-card" data-category="flowering">
-          <div class="plant-card-img"><img src="images/29.png" alt="Wrightia Antidysenterica" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Flowering</span>
-            <h3>Jasmine Tree (Indrajao)</h3>
-            <p>Snowy white single flowers, looks like small white stars scattered on green.</p>
-          </div>
-        </div>
-        <!-- Card FL16 -->
-        <div class="plant-card" data-category="flowering">
-          <div class="plant-card-img"><img src="images/30.png" alt="Rondeletia Odorata" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Flowering</span>
-            <h3>Sweet Scented Rondeletia</h3>
-            <p>Clusters of bright orange-red blossoms with a golden center throat.</p>
-          </div>
-        </div>
-        <!-- Card FL17 -->
-        <div class="plant-card" data-category="flowering">
-          <div class="plant-card-img"><img src="images/31.png" alt="Crossandra Infundibuliformis" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Flowering</span>
-            <h3>Firecracker Flower (Kanakambaram)</h3>
-            <p>Vibrant orange-apricot fan petals, highly celebrated local species.</p>
-          </div>
-        </div>
-        <!-- Card FL18 -->
-        <div class="plant-card" data-category="flowering">
-          <div class="plant-card-img"><img src="images/32.png" alt="Gardenia Jasminoides" loading="lazy"></div>
-          <div class="plant-card-content">
-            <span class="plant-card-tag">Flowering</span>
-            <h3>Cape Jasmine (Gandharaj)</h3>
-            <p>Heavy waxy white layered flowers, offering an intense sweet fragrance.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Lightbox Modal Container -->
-  <div class="lightbox-modal" id="lightboxModal">
-    <div class="lightbox-close"><i class="fas fa-times"></i></div>
-    <div class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></div>
-    <div class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></div>
-    <div class="lightbox-content">
-      <img src="" alt="" class="lightbox-img">
-      <div class="lightbox-caption">Caption text</div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <!-- About Column -->
-        <div class="footer-about">
-          <div class="footer-logo">
-            <img src="images/123.png" alt="Kadiyam Plants Gallery Logo" class="logo-img" style="height: 40px; border-radius: 6px;">
-            <div class="brand-name">
-              Kadiyam Plants Gallery
-              <span style="color: #7d9e8c;">Premium Nursery</span>
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Kadiyam Plants Gallery Logo" class="logo-img">
+            <div class="logo-text">
+                <span class="logo-name">Kadiyam Plants Gallery</span>
+                <span class="logo-sub">NURSERY & LANDSCAPING</span>
             </div>
-          </div>
-          <p>Cultivating native and ornamental beauty for over 10 years in Kadiyam, Andhra Pradesh. We specialize in home gardening setups and grand landscaping projects.</p>
-          <div class="footer-socials">
-            <a href="https://www.instagram.com/kadiyam_plants_gallery" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/917207755335" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a href="tel:7207755335" aria-label="Phone"><i class="fas fa-phone-alt"></i></a>
-          </div>
+        </a>
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <div class="nav-dropdown">
+                <a href="varieties.html" class="nav-link active">Varieties <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="varieties.html?category=outdoor">Outdoor Plants</a>
+                    <a href="varieties.html?category=flowering">Flowering Plants</a>
+                    <a href="varieties.html?category=ficus">Ficus Plants</a>
+                    <a href="varieties.html?category=fruit">Fruit Plants</a>
+                    <a href="varieties.html?category=avenue">Avenue Plants</a>
+                    <a href="varieties.html?category=border">Border Plants</a>
+                </div>
+            </div>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="landscaping.html" class="nav-link">Landscaping Works</a>
+            <a href="contact.html" class="nav-link">Contact Us</a>
+        </nav>
+        <div class="nav-toggle" id="navToggle">
+            <span></span><span></span><span></span>
         </div>
-        
-        <!-- Quick Links -->
-        <div class="footer-links-col">
-          <h3>Quick Links</h3>
-          <ul class="footer-links">
-            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
-            <li><a href="landscaping.html"><i class="fas fa-chevron-right"></i> Landscaping</a></li>
-            <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Media Gallery</a></li>
-            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
-          </ul>
-        </div>
-        
-        <!-- Plant Catalog Quick Links -->
-        <div class="footer-links-col">
-          <h3>Categories</h3>
-          <ul class="footer-links">
-            <li><a href="varieties.html?category=outdoor"><i class="fas fa-chevron-right"></i> Outdoor Plants</a></li>
-            <li><a href="varieties.html?category=flowering"><i class="fas fa-chevron-right"></i> Flowering Plants</a></li>
-            <li><a href="varieties.html?category=ficus"><i class="fas fa-chevron-right"></i> Ficus Plants</a></li>
-            <li><a href="varieties.html?category=fruit"><i class="fas fa-chevron-right"></i> Fruit Trees</a></li>
-            <li><a href="varieties.html?category=avenue"><i class="fas fa-chevron-right"></i> Avenue Trees</a></li>
-          </ul>
-        </div>
-        
-        <!-- Address & Contacts -->
-        <div class="footer-links-col">
-          <h3>Nursery Location</h3>
-          <ul class="footer-contact-info">
-            <li>
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Kadiapulanka, Kadiyam Mandal,<br>Andhra Pradesh, India</span>
-            </li>
-            <li>
-              <i class="fas fa-phone-alt"></i>
-              <a href="tel:7207755335">7207755335</a>
-            </li>
-            <li>
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:kadiyamplantsgallery@gmail.com">kadiyamplantsgallery@gmail.com</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p>&copy; 2026 Kadiyam Plants Gallery. All Rights Reserved.</p>
-        <p>Crafted for botanical excellence.</p>
-      </div>
     </div>
-  </footer>
+</header>
 
-  <!-- Vanilla Script File -->
-  <script src="script.js"></script>
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero">
+    <img src="images/123.png" alt="Plant Catalog" class="page-hero-img">
+    <div class="page-hero-overlay">
+        <h1 class="letter-reveal" id="varietiesHeading">PLANT VARIETIES</h1>
+        <p>Explore our wide selection of beautifully nurtured plants</p>
+    </div>
+</section>
+
+<!-- ===== CATEGORY FILTER BUTTONS (PILL STYLE) ===== -->
+<div class="category-filter-bar">
+    <div class="container category-filter-inner">
+        <button class="filter-pill active" data-filter="all">ALL</button>
+        <button class="filter-pill" data-filter="outdoor">Outdoor Plants</button>
+        <button class="filter-pill" data-filter="flowering">Flowering Plants</button>
+        <button class="filter-pill" data-filter="fruit">Fruit Plants</button>
+        <button class="filter-pill" data-filter="avenue">Avenue Plants</button>
+        <button class="filter-pill" data-filter="border">Border Plants</button>
+        <button class="filter-pill" data-filter="bougainvillea">Bougainvillea</button>
+        <button class="filter-pill" data-filter="ficus">Ficus Plants</button>
+    </div>
+</div>
+
+<!-- ===== PLANT CATALOG GRID SECTION ===== -->
+<section class="section">
+    <div class="container">
+
+        <div class="variety-grid" id="varietyGrid">
+
+            <!-- 1. OUTDOOR PLANTS (97.png -> 111.png with names) -->
+            <div class="plant-card anim-up" data-category="outdoor">
+                <div class="plant-card-img"><img src="images/97.png" alt="Black Ficus" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Black Ficus</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="outdoor">
+                <div class="plant-card-img"><img src="images/98.png" alt="Panda Ficus" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Panda Ficus</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="outdoor">
+                <div class="plant-card-img"><img src="images/99.png" alt="Terminalya Green" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Terminalya Green</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="outdoor">
+                <div class="plant-card-img"><img src="images/100.png" alt="Terminalya White" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Terminalya White</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="outdoor">
+                <div class="plant-card-img"><img src="images/101.png" alt="Foxtail Palm" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Foxtail Palm</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="outdoor">
+                <div class="plant-card-img"><img src="images/102.png" alt="Mirchi Meri Green" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Mirchi Meri Green</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="outdoor">
+                <div class="plant-card-img"><img src="images/103.png" alt="Terminalya Red" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Terminalya Red</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="outdoor">
+                <div class="plant-card-img"><img src="images/104.png" alt="Mirchi Meri Gold" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Mirchi Meri Gold</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="outdoor">
+                <div class="plant-card-img"><img src="images/105.png" alt="Redar Mirchira" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Redar Mirchira</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="outdoor">
+                <div class="plant-card-img"><img src="images/106.png" alt="Golden Shower" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Golden Shower</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="outdoor">
+                <div class="plant-card-img"><img src="images/107.png" alt="Royal Palm" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Royal Palm</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="outdoor">
+                <div class="plant-card-img"><img src="images/108.png" alt="Areca Palm" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Areca Palm</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="outdoor">
+                <div class="plant-card-img"><img src="images/109.png" alt="Traveller Palm" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Traveller Palm</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="outdoor">
+                <div class="plant-card-img"><img src="images/110.png" alt="Date Palm" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Date Palm</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="outdoor">
+                <div class="plant-card-img"><img src="images/111.png" alt="Fishtail Palm" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Fishtail Palm</h3></div>
+            </div>
+
+            <!-- 2. FLOWERING PLANTS (15.png -> 32.png, image only) -->
+            <div class="plant-card anim-up" data-category="flowering"><div class="plant-card-img"><img src="images/15.png" alt="Flowering Plant 15" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="flowering"><div class="plant-card-img"><img src="images/16.png" alt="Flowering Plant 16" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="flowering"><div class="plant-card-img"><img src="images/17.png" alt="Flowering Plant 17" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="flowering"><div class="plant-card-img"><img src="images/18.png" alt="Flowering Plant 18" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="flowering"><div class="plant-card-img"><img src="images/19.png" alt="Flowering Plant 19" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="flowering"><div class="plant-card-img"><img src="images/20.png" alt="Flowering Plant 20" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="flowering"><div class="plant-card-img"><img src="images/21.png" alt="Flowering Plant 21" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="flowering"><div class="plant-card-img"><img src="images/22.png" alt="Flowering Plant 22" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="flowering"><div class="plant-card-img"><img src="images/23.png" alt="Flowering Plant 23" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="flowering"><div class="plant-card-img"><img src="images/24.png" alt="Flowering Plant 24" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="flowering"><div class="plant-card-img"><img src="images/25.png" alt="Flowering Plant 25" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="flowering"><div class="plant-card-img"><img src="images/26.png" alt="Flowering Plant 26" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="flowering"><div class="plant-card-img"><img src="images/27.png" alt="Flowering Plant 27" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="flowering"><div class="plant-card-img"><img src="images/28.png" alt="Flowering Plant 28" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="flowering"><div class="plant-card-img"><img src="images/29.png" alt="Flowering Plant 29" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="flowering"><div class="plant-card-img"><img src="images/30.png" alt="Flowering Plant 30" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="flowering"><div class="plant-card-img"><img src="images/31.png" alt="Flowering Plant 31" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="flowering"><div class="plant-card-img"><img src="images/32.png" alt="Flowering Plant 32" loading="lazy"></div></div>
+
+            <!-- 3. FRUIT PLANTS (33.png -> 60.png, image only) -->
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/33.png" alt="Fruit Plant 33" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/34.png" alt="Fruit Plant 34" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/35.png" alt="Fruit Plant 35" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/36.png" alt="Fruit Plant 36" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/37.png" alt="Fruit Plant 37" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/38.png" alt="Fruit Plant 38" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/39.png" alt="Fruit Plant 39" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/40.png" alt="Fruit Plant 40" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/41.png" alt="Fruit Plant 41" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/42.png" alt="Fruit Plant 42" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/43.png" alt="Fruit Plant 43" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/44.png" alt="Fruit Plant 44" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/45.png" alt="Fruit Plant 45" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/46.png" alt="Fruit Plant 46" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/47.png" alt="Fruit Plant 47" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/48.png" alt="Fruit Plant 48" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/49.png" alt="Fruit Plant 49" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/50.png" alt="Fruit Plant 50" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/51.png" alt="Fruit Plant 51" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/52.png" alt="Fruit Plant 52" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/53.png" alt="Fruit Plant 53" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/54.png" alt="Fruit Plant 54" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/55.png" alt="Fruit Plant 55" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/56.png" alt="Fruit Plant 56" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/57.png" alt="Fruit Plant 57" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/58.png" alt="Fruit Plant 58" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/59.png" alt="Fruit Plant 59" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="fruit"><div class="plant-card-img"><img src="images/60.png" alt="Fruit Plant 60" loading="lazy"></div></div>
+
+            <!-- 4. AVENUE PLANTS (85.png -> 96.png with names) -->
+            <div class="plant-card anim-up" data-category="avenue">
+                <div class="plant-card-img"><img src="images/85.png" alt="Mahagani" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Mahagani</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="avenue">
+                <div class="plant-card-img"><img src="images/86.png" alt="Tabebuia Rosea" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Tabebuia Rosea</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="avenue">
+                <div class="plant-card-img"><img src="images/87.png" alt="Jacaranda" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Jacaranda</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="avenue">
+                <div class="plant-card-img"><img src="images/88.png" alt="Peltophorum" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Peltophorum</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="avenue">
+                <div class="plant-card-img"><img src="images/89.png" alt="Marri" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Marri</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="avenue">
+                <div class="plant-card-img"><img src="images/90.png" alt="Nallamadhi" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Nallamadhi</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="avenue">
+                <div class="plant-card-img"><img src="images/91.png" alt="Bahunia" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Bahunia</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="avenue">
+                <div class="plant-card-img"><img src="images/92.png" alt="Spathodia" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Spathodia</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="avenue">
+                <div class="plant-card-img"><img src="images/93.png" alt="Kadhamba" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Kadhamba</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="avenue">
+                <div class="plant-card-img"><img src="images/94.png" alt="Badham" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Badham</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="avenue">
+                <div class="plant-card-img"><img src="images/95.png" alt="Gulmohar" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Gulmohar</h3></div>
+            </div>
+            <div class="plant-card anim-up" data-category="avenue">
+                <div class="plant-card-img"><img src="images/96.png" alt="Neem" loading="lazy"></div>
+                <div class="plant-card-body"><h3>Neem</h3></div>
+            </div>
+
+            <!-- 5. BORDER PLANTS (61.png -> 67.png, image only) -->
+            <div class="plant-card anim-up" data-category="border"><div class="plant-card-img"><img src="images/61.png" alt="Border Plant 61" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="border"><div class="plant-card-img"><img src="images/62.png" alt="Border Plant 62" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="border"><div class="plant-card-img"><img src="images/63.png" alt="Border Plant 63" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="border"><div class="plant-card-img"><img src="images/64.png" alt="Border Plant 64" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="border"><div class="plant-card-img"><img src="images/65.png" alt="Border Plant 65" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="border"><div class="plant-card-img"><img src="images/66.png" alt="Border Plant 66" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="border"><div class="plant-card-img"><img src="images/67.png" alt="Border Plant 67" loading="lazy"></div></div>
+
+            <!-- 6. BOUGAINVILLEA (image.png, image copy.png -> image copy 14.png, image only) -->
+            <div class="plant-card anim-up" data-category="bougainvillea"><div class="plant-card-img"><img src="images/image.png" alt="Bougainvillea" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="bougainvillea"><div class="plant-card-img"><img src="images/image copy.png" alt="Bougainvillea Copy" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="bougainvillea"><div class="plant-card-img"><img src="images/image copy 2.png" alt="Bougainvillea 2" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="bougainvillea"><div class="plant-card-img"><img src="images/image copy 3.png" alt="Bougainvillea 3" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="bougainvillea"><div class="plant-card-img"><img src="images/image copy 4.png" alt="Bougainvillea 4" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="bougainvillea"><div class="plant-card-img"><img src="images/image copy 5.png" alt="Bougainvillea 5" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="bougainvillea"><div class="plant-card-img"><img src="images/image copy 6.png" alt="Bougainvillea 6" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="bougainvillea"><div class="plant-card-img"><img src="images/image copy 7.png" alt="Bougainvillea 7" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="bougainvillea"><div class="plant-card-img"><img src="images/image copy 8.png" alt="Bougainvillea 8" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="bougainvillea"><div class="plant-card-img"><img src="images/image copy 9.png" alt="Bougainvillea 9" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="bougainvillea"><div class="plant-card-img"><img src="images/image copy 10.png" alt="Bougainvillea 10" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="bougainvillea"><div class="plant-card-img"><img src="images/image copy 11.png" alt="Bougainvillea 11" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="bougainvillea"><div class="plant-card-img"><img src="images/image copy 12.png" alt="Bougainvillea 12" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="bougainvillea"><div class="plant-card-img"><img src="images/image copy 13.png" alt="Bougainvillea 13" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="bougainvillea"><div class="plant-card-img"><img src="images/image copy 14.png" alt="Bougainvillea 14" loading="lazy"></div></div>
+
+            <!-- 7. FICUS PLANTS (68.png -> 84.png, image only) -->
+            <div class="plant-card anim-up" data-category="ficus"><div class="plant-card-img"><img src="images/68.png" alt="Ficus Plant 68" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="ficus"><div class="plant-card-img"><img src="images/69.png" alt="Ficus Plant 69" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="ficus"><div class="plant-card-img"><img src="images/70.png" alt="Ficus Plant 70" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="ficus"><div class="plant-card-img"><img src="images/71.png" alt="Ficus Plant 71" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="ficus"><div class="plant-card-img"><img src="images/72.png" alt="Ficus Plant 72" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="ficus"><div class="plant-card-img"><img src="images/73.png" alt="Ficus Plant 73" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="ficus"><div class="plant-card-img"><img src="images/74.png" alt="Ficus Plant 74" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="ficus"><div class="plant-card-img"><img src="images/75.png" alt="Ficus Plant 75" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="ficus"><div class="plant-card-img"><img src="images/76.png" alt="Ficus Plant 76" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="ficus"><div class="plant-card-img"><img src="images/77.png" alt="Ficus Plant 77" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="ficus"><div class="plant-card-img"><img src="images/78.png" alt="Ficus Plant 78" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="ficus"><div class="plant-card-img"><img src="images/79.png" alt="Ficus Plant 79" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="ficus"><div class="plant-card-img"><img src="images/80.png" alt="Ficus Plant 80" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="ficus"><div class="plant-card-img"><img src="images/81.png" alt="Ficus Plant 81" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="ficus"><div class="plant-card-img"><img src="images/82.png" alt="Ficus Plant 82" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="ficus"><div class="plant-card-img"><img src="images/83.png" alt="Ficus Plant 83" loading="lazy"></div></div>
+            <div class="plant-card anim-up" data-category="ficus"><div class="plant-card-img"><img src="images/84.png" alt="Ficus Plant 84" loading="lazy"></div></div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Lightbox Modal for Plant Image Zoom / Navigation -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Close Lightbox"><i class="fas fa-times"></i></button>
+    <button class="lightbox-prev" aria-label="Previous Image"><i class="fas fa-chevron-left"></i></button>
+    <button class="lightbox-next" aria-label="Next Image"><i class="fas fa-chevron-right"></i></button>
+    <div class="lightbox-content">
+        <img src="" alt="" id="lightboxImg">
+    </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="footer-curve"></div>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Logo" class="footer-logo-img">
+                    <h3>Kadiyam Plants Gallery</h3>
+                </div>
+                <p class="footer-desc">Your trusted partner in greenery. Cultivating native and ornamental beauty for over 10 years in Kadiyam, Andhra Pradesh.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="footer-contact-list">
+                    <li><i class="fas fa-map-marker-alt"></i> Kadiapulanka, Kadiyam Mandal, AP</li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:kadiyamplantsgallery@gmail.com">kadiyamplantsgallery@gmail.com</a></li>
+                    <li><i class="fas fa-phone-alt"></i> <a href="tel:+917207755335">+91 7207755335</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="varieties.html">Varieties</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="landscaping.html">Landscaping Works</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <div class="footer-social">
+                    <a href="https://wa.me/917207755335" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/kadiyam_plants_gallery?igsh=MWoxNXk2am1xbWY4YQ==" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="tel:+917207755335" class="social-icon"><i class="fas fa-phone-alt"></i></a>
+                </div>
+                <p class="footer-cta">Open for orders & landscaping consultations. Reach out today!</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kadiyam Plants Gallery. All Rights Reserved.</p>
+            <p>Designed with <i class="fas fa-leaf" style="color: #4ade80;"></i> care</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Floating Buttons -->
+<a href="https://wa.me/917207755335" target="_blank" class="floating-btn floating-whatsapp"><i class="fab fa-whatsapp"></i></a>
+<a href="tel:+917207755335" class="floating-btn floating-call"><i class="fas fa-phone-alt"></i></a>
+
+<script src="script.js"></script>
 </body>
 </html>

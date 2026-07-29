@@ -1,426 +1,491 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kadiyam Plants Gallery is a premium nursery in Andhra Pradesh offering high-quality outdoor plants, avenue trees, ficus varieties, and professional landscaping services.">
-  <title>Kadiyam Plants Gallery | Premium Nursery & Landscaping Services</title>
-  
-  <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Local Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kadiyam Plants Gallery | Premium Nursery & Landscaping in Andhra Pradesh</title>
+    <meta name="description" content="Kadiyam Plants Gallery - Premium nursery in Kadiapulanka, Kadiyam Mandal, Andhra Pradesh. Wide variety of outdoor, flowering, ficus, fruit, avenue plants and professional landscaping services.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Floating Social Actions -->
-  <div class="floating-actions">
-    <a href="https://wa.me/917207755335" target="_blank" class="float-btn whatsapp" aria-label="Chat on WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="tel:7207755335" class="float-btn phone" aria-label="Call Us">
-      <i class="fas fa-phone-alt"></i>
-    </a>
-    <a href="https://www.instagram.com/kadiyam_plants_gallery" target="_blank" class="float-btn instagram" aria-label="Follow on Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </div>
-
-  <!-- Top Contact Bar -->
-  <div class="top-bar">
-    <div class="container top-bar-content">
-      <div class="top-bar-contact">
-        <a href="mailto:kadiyamplantsgallery@gmail.com"><i class="fas fa-envelope"></i> kadiyamplantsgallery@gmail.com</a>
-        <a href="tel:7207755335"><i class="fas fa-phone-alt"></i> 7207755335</a>
-        <a href="https://wa.me/917207755335" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-      </div>
-      <div class="top-bar-socials">
-        <a href="https://www.instagram.com/kadiyam_plants_gallery" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://share.google/ORdUQ8QDstT3n8Wep" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
-      </div>
+<!-- ===== TOP BAR ===== -->
+<div class="top-bar">
+    <div class="container top-bar-inner">
+        <div class="top-bar-left">
+            <a href="mailto:kadiyamplantsgallery@gmail.com"><i class="fas fa-envelope"></i> kadiyamplantsgallery@gmail.com</a>
+        </div>
+        <div class="top-bar-right">
+            <a href="tel:+917207755335"><i class="fas fa-phone-alt"></i> 7207755335</a>
+            <a href="https://www.instagram.com/kadiyam_plants_gallery?igsh=MWoxNXk2am1xbWY4YQ==" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://wa.me/917207755335" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
     </div>
-  </div>
+</div>
 
-  <!-- Sticky Navbar -->
-  <header>
-    <div class="container navbar">
-      <a href="index.html" class="logo-container">
-        <!-- Logo fits cleanly with no stretching or distortion -->
-        <img src="images/logo.png" alt="Kadiyam Plants Gallery Tree Logo" class="logo-img">
-        <div class="brand-name">
-          Kadiyam Plants Gallery
-          <span>Nursery & Landscaping</span>
-        </div>
-      </a>
-      
-      <div class="menu-toggle" id="menuToggle">
-        <i class="fas fa-bars"></i>
-      </div>
-      
-      <ul class="nav-links" id="navLinks">
-        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-        <li class="nav-item">
-          <a href="varieties.html" class="nav-link">Plant Varieties <i class="fas fa-chevron-down"></i></a>
-          <ul class="dropdown-menu">
-            <li class="dropdown-item"><a href="varieties.html?category=outdoor">Outdoor Plants</a></li>
-            <li class="dropdown-item"><a href="varieties.html?category=flowering">Flowering Plants</a></li>
-            <li class="dropdown-item"><a href="varieties.html?category=ficus">Ficus Plants</a></li>
-            <li class="dropdown-item"><a href="varieties.html?category=fruit">Fruit Plants</a></li>
-            <li class="dropdown-item"><a href="varieties.html?category=avenue">Avenue Plants</a></li>
-            <li class="dropdown-item"><a href="varieties.html?category=border">Border Plants</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a href="landscaping.html" class="nav-link">Landscaping Services</a></li>
-        <li class="nav-item">
-          <a href="gallery.html" class="nav-link">Gallery <i class="fas fa-chevron-down"></i></a>
-          <ul class="dropdown-menu">
-            <li class="dropdown-item"><a href="gallery.html?tab=photos">Photos</a></li>
-            <li class="dropdown-item"><a href="gallery.html?tab=videos">Videos</a></li>
-            <li class="dropdown-item"><a href="gallery.html?tab=loading">Loading Plants</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <!-- Hero Slider Section -->
-  <section class="hero-slider">
-    <!-- Overlay Content (Text & Buttons) -->
-    <div class="hero-content">
-      <span class="hero-subtitle highlight-typewriter">Welcome To</span>
-      <h1 class="hero-title letter-reveal" style="color: #ffffff; font-weight: 700; text-shadow: 2px 2px 10px rgba(0,0,0,0.6);">Kadiyam Plants Gallery</h1>
-      <div class="hero-cta">
-        <a href="varieties.html" class="btn btn-gold">Explore Plants</a>
-        <a href="contact.html" class="btn btn-outline" style="border-color: white; color: white;">Enquire Now</a>
-      </div>
-    </div>
-
-    <!-- Navigation Arrows -->
-    <button class="slider-arrow prev-arrow" aria-label="Previous Slide">
-      <i class="fas fa-chevron-left"></i>
-    </button>
-    <button class="slider-arrow next-arrow" aria-label="Next Slide">
-      <i class="fas fa-chevron-right"></i>
-    </button>
-
-    <!-- Slide 1 -->
-    <div class="slide slide-with-text active" style="background-image: url('images/123.png');"></div>
-    
-    <!-- Slide 2 -->
-    <div class="slide" style="background-image: url('images/122.png');"></div>
-    
-    <!-- Slide 3 -->
-    <div class="slide" style="background-image: url('images/121.png');"></div>
-
-    <!-- Indicator Dots -->
-    <div class="slider-indicators"></div>
-  </section>
-
-  <!-- Intro / Brand Statement Section -->
-  <section class="intro-section section-padding reveal reveal-fade">
-    <div class="container">
-      <h2 class="intro-title-spaced letter-reveal">KADIYAM PLANTS GALLERY</h2>
-      <p class="intro-desc">With over 10 years of professional experience, we cultivate, supply, and maintain an extensive array of plant varieties, alongside delivering top-tier landscaping services for residential villas, hotels, and public sites.</p>
-      
-      <div class="intro-media-container">
-        <!-- 3-Image Strip -->
-        <div class="intro-strip">
-          <div class="strip-item">
-            <img src="images/17.png" alt="Nursery Plants Strip 1" loading="lazy">
-          </div>
-          <div class="strip-item">
-            <img src="images/18.png" alt="Nursery Plants Strip 2" loading="lazy">
-          </div>
-          <div class="strip-item">
-            <img src="images/19.png" alt="Nursery Plants Strip 3" loading="lazy">
-          </div>
-        </div>
-        
-        <!-- Larger Accent Image -->
-        <div class="intro-accent">
-          <img src="images/125.png" alt="Nursery Plant Accent" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Plant Varieties Preview Section -->
-  <section class="section-padding">
-    <div class="container">
-      <div class="text-center" style="margin-bottom: 50px;">
-        <span class="section-subtitle letter-reveal">Our Botanical Wonders</span>
-        <h2 class="section-title letter-reveal">Plant Varieties</h2>
-      </div>
-      
-      <div class="category-preview-grid">
-        <!-- Card 1: Outdoor Plants -->
-        <div class="category-card reveal reveal-up" style="transition-delay: 50ms;">
-          <div class="category-card-img">
-            <img src="images/88.png" alt="Outdoor Plants" loading="lazy">
-          </div>
-          <div class="category-card-content">
-            <h3>Outdoor Plants</h3>
-            <a href="varieties.html?category=outdoor" class="category-link">View Collection <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>
-        
-        <!-- Card 2: Flowering Plants -->
-        <div class="category-card reveal reveal-up" style="transition-delay: 150ms;">
-          <div class="category-card-img">
-            <img src="images/21.png" alt="Flowering Plants" loading="lazy">
-          </div>
-          <div class="category-card-content">
-            <h3>Flowering Plants</h3>
-            <a href="varieties.html?category=flowering" class="category-link">View Collection <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>
-        
-        <!-- Card 3: Avenue Plants -->
-        <div class="category-card reveal reveal-up" style="transition-delay: 250ms;">
-          <div class="category-card-img">
-            <img src="images/91.png" alt="Avenue Plants" loading="lazy">
-          </div>
-          <div class="category-card-content">
-            <h3>Avenue Plants</h3>
-            <a href="varieties.html?category=avenue" class="category-link">View Collection <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>
-        
-        <!-- Card 4: Ficus Plants -->
-        <div class="category-card reveal reveal-up" style="transition-delay: 350ms;">
-          <div class="category-card-img">
-            <img src="images/76.png" alt="Ficus Plants" loading="lazy">
-          </div>
-          <div class="category-card-content">
-            <h3>Ficus Plants</h3>
-            <a href="varieties.html?category=ficus" class="category-link">View Collection <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>
-        
-        <!-- Card 5: Fruit Plants -->
-        <div class="category-card reveal reveal-up" style="transition-delay: 450ms;">
-          <div class="category-card-img">
-            <img src="images/126.png" alt="Fruit Plants" loading="lazy">
-          </div>
-          <div class="category-card-content">
-            <h3>Fruit Plants</h3>
-            <a href="varieties.html?category=fruit" class="category-link">View Collection <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Showcase Strip (Marquee) Section -->
-  <section class="showcase-strip-section reveal reveal-fade">
-    <div class="marquee-container">
-      <div class="marquee-track">
-        <!-- 73.png through 83.png -->
-        <div class="marquee-item"><img src="images/73.png" alt="Ornamental Shape 1" loading="lazy"></div>
-        <div class="marquee-item"><img src="images/74.png" alt="Ornamental Shape 2" loading="lazy"></div>
-        <div class="marquee-item"><img src="images/75.png" alt="Ornamental Shape 3" loading="lazy"></div>
-        <div class="marquee-item"><img src="images/76.png" alt="Ornamental Shape 4" loading="lazy"></div>
-        <div class="marquee-item"><img src="images/77.png" alt="Ornamental Shape 5" loading="lazy"></div>
-        <div class="marquee-item"><img src="images/78.png" alt="Ornamental Shape 6" loading="lazy"></div>
-        <div class="marquee-item"><img src="images/79.png" alt="Ornamental Shape 7" loading="lazy"></div>
-        <div class="marquee-item"><img src="images/80.png" alt="Ornamental Shape 8" loading="lazy"></div>
-        <div class="marquee-item"><img src="images/81.png" alt="Ornamental Shape 9" loading="lazy"></div>
-        <div class="marquee-item"><img src="images/82.png" alt="Ornamental Shape 10" loading="lazy"></div>
-        <div class="marquee-item"><img src="images/83.png" alt="Ornamental Shape 11" loading="lazy"></div>
-        
-        <!-- Duplicated for Infinite Seamless Loop -->
-        <div class="marquee-item"><img src="images/73.png" alt="Ornamental Shape 1" loading="lazy"></div>
-        <div class="marquee-item"><img src="images/74.png" alt="Ornamental Shape 2" loading="lazy"></div>
-        <div class="marquee-item"><img src="images/75.png" alt="Ornamental Shape 3" loading="lazy"></div>
-        <div class="marquee-item"><img src="images/76.png" alt="Ornamental Shape 4" loading="lazy"></div>
-        <div class="marquee-item"><img src="images/77.png" alt="Ornamental Shape 5" loading="lazy"></div>
-        <div class="marquee-item"><img src="images/78.png" alt="Ornamental Shape 6" loading="lazy"></div>
-        <div class="marquee-item"><img src="images/79.png" alt="Ornamental Shape 7" loading="lazy"></div>
-        <div class="marquee-item"><img src="images/80.png" alt="Ornamental Shape 8" loading="lazy"></div>
-        <div class="marquee-item"><img src="images/81.png" alt="Ornamental Shape 9" loading="lazy"></div>
-        <div class="marquee-item"><img src="images/82.png" alt="Ornamental Shape 10" loading="lazy"></div>
-        <div class="marquee-item"><img src="images/83.png" alt="Ornamental Shape 11" loading="lazy"></div>
-      </div>
-    </div>
-    
-    <div class="container text-center">
-      <div class="nursery-quote">
-        "A garden is a grand playground of forms and shadows. We shape the greens to bring calmness to your surroundings and structure to your modern architecture."
-        <div class="quote-author">Kadiyam Plants Gallery Craftsmen</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose Us Section -->
-  <section class="why-choose-us section-padding">
-    <div class="container">
-      <div class="text-center" style="margin-bottom: 50px;">
-        <span class="section-subtitle letter-reveal">Our Core Commitments</span>
-        <h2 class="section-title letter-reveal">Why Choose Us</h2>
-      </div>
-      
-      <div class="highlights-grid">
-        <!-- Block 1: Expert Farmers -->
-        <div class="highlight-block reveal reveal-up" style="transition-delay: 50ms;">
-          <div class="highlight-icon-wrapper">
-            <i class="fas fa-seedling"></i>
-          </div>
-          <h3>Expert Farmers</h3>
-          <p>Our experienced horticulturists raise each plant with customized soil blends and micro-nutrients.</p>
-        </div>
-        
-        <!-- Block 2: Home Gardening -->
-        <div class="highlight-block reveal reveal-up" style="transition-delay: 150ms;">
-          <div class="highlight-icon-wrapper">
-            <i class="fas fa-home"></i>
-          </div>
-          <h3>Home Gardening</h3>
-          <p>We provide full assistance in selecting and arranging plants tailored for residential balconies and terraces.</p>
-        </div>
-        
-        <!-- Block 3: Clean Work -->
-        <div class="highlight-block reveal reveal-up" style="transition-delay: 250ms;">
-          <div class="highlight-icon-wrapper">
-            <i class="fas fa-broom"></i>
-          </div>
-          <h3>Clean Working</h3>
-          <p>We ensure zero-mess transplantation, structured trimming, and neat layout execution on all landscaping jobs.</p>
-        </div>
-        
-        <!-- Block 4: Proper Plant Care -->
-        <div class="highlight-block reveal reveal-up" style="transition-delay: 350ms;">
-          <div class="highlight-icon-wrapper">
-            <i class="fas fa-heart"></i>
-          </div>
-          <h3>Proper Plant Care</h3>
-          <p>We share dedicated watering schedules, pest remedies, and seasonal guidance for long-term plant life.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Final Contact / Availability Band -->
-  <section class="contact-band section-padding reveal reveal-fade">
-    <div class="container">
-      <div class="band-layout">
-        <!-- Info & Channels -->
-        <div class="band-info">
-          <h2>We're Here to Help</h2>
-          <p>Have inquiries about plants bulk supply or landscaping designs? Reach out to us directly.</p>
-          
-          <div class="band-channels">
-            <a href="tel:7207755335" class="band-channel-card">
-              <i class="fas fa-phone-alt"></i>
-              <div class="band-channel-details">
-                <span>Call Us</span>
-                <strong>7207755335</strong>
-              </div>
-            </a>
-            
-            <a href="https://wa.me/917207755335" target="_blank" class="band-channel-card">
-              <i class="fab fa-whatsapp"></i>
-              <div class="band-channel-details">
-                <span>WhatsApp Chat</span>
-                <strong>7207755335</strong>
-              </div>
-            </a>
-          </div>
-        </div>
-        
-        <!-- Working Hours Card -->
-        <div class="band-hours-card">
-          <h3><i class="far fa-clock"></i> Working Hours</h3>
-          <div class="hours-table">
-            <div class="hours-row">
-              <span class="hours-day">Monday - Saturday</span>
-              <span class="hours-time">08:00 AM - 07:00 PM</span>
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Kadiyam Plants Gallery Logo" class="logo-img">
+            <div class="logo-text">
+                <span class="logo-name">Kadiyam Plants Gallery</span>
+                <span class="logo-sub">NURSERY & LANDSCAPING</span>
             </div>
-            <div class="hours-row">
-              <span class="hours-day">Sunday</span>
-              <span class="hours-time">08:00 AM - 07:00 PM</span>
+        </a>
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <div class="nav-dropdown">
+                <a href="varieties.html" class="nav-link">Varieties <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="varieties.html?category=outdoor">Outdoor Plants</a>
+                    <a href="varieties.html?category=flowering">Flowering Plants</a>
+                    <a href="varieties.html?category=ficus">Ficus Plants</a>
+                    <a href="varieties.html?category=fruit">Fruit Plants</a>
+                    <a href="varieties.html?category=avenue">Avenue Plants</a>
+                    <a href="varieties.html?category=border">Border Plants</a>
+                </div>
             </div>
-          </div>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="landscaping.html" class="nav-link">Landscaping Works</a>
+            <a href="contact.html" class="nav-link">Contact Us</a>
+        </nav>
+        <div class="nav-toggle" id="navToggle">
+            <span></span><span></span><span></span>
         </div>
-      </div>
     </div>
-  </section>
+</header>
 
-  <!-- Footer -->
-  <footer>
+<!-- ===== HERO SECTION ===== -->
+<section class="hero" id="home">
+    <div class="hero-slider">
+        <!-- 1st Slide: 140.png -->
+        <div class="hero-slide active">
+            <img src="images/140.png" alt="Welcome to Kadiyam Plants Gallery" class="hero-img">
+            <div class="hero-content container">
+                <div class="hero-text-anim">
+                    <span class="hero-strip">Welcome To</span>
+                    <h1 class="hero-title-new">Kadiyam Plants Gallery</h1>
+                </div>
+            </div>
+        </div>
+        <!-- 2nd Slide: 121.png -->
+        <div class="hero-slide">
+            <img src="images/121.png" alt="Our Nursery View" class="hero-img">
+        </div>
+        <!-- 3rd Slide: 122.png -->
+        <div class="hero-slide">
+            <img src="images/122.png" alt="Plant Collection" class="hero-img">
+        </div>
+        <!-- 4th Slide: 144.png -->
+        <div class="hero-slide">
+            <img src="images/144.png" alt="Beautiful Gardens" class="hero-img">
+        </div>
+    </div>
+    <div class="hero-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+        <span class="dot" data-slide="3"></span>
+    </div>
+    <button class="hero-arrow hero-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+    <button class="hero-arrow hero-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+</section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section class="about section" id="about">
     <div class="container">
-      <div class="footer-grid">
-        <!-- About Column -->
-        <div class="footer-about">
-          <div class="footer-logo">
-            <img src="images/123.png" alt="Kadiyam Plants Gallery Logo" class="logo-img" style="height: 40px; border-radius: 6px;">
-            <div class="brand-name">
-              Kadiyam Plants Gallery
-              <span style="color: #7d9e8c;">Premium Nursery</span>
+        <div class="about-grid">
+            <div class="about-image anim-left">
+                <img src="images/127.png" alt="About Kadiyam Plants Gallery">
             </div>
-          </div>
-          <p>Cultivating native and ornamental beauty for over 10 years in Kadiyam, Andhra Pradesh. We specialize in home gardening setups and grand landscaping projects.</p>
-          <div class="footer-socials">
-            <a href="https://www.instagram.com/kadiyam_plants_gallery" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/917207755335" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a href="tel:7207755335" aria-label="Phone"><i class="fas fa-phone-alt"></i></a>
-          </div>
+            <div class="about-text anim-right">
+                <span class="section-label"><i class="fas fa-seedling"></i> About Us</span>
+                <h2 class="section-title">About Kadiyam Plants Gallery</h2>
+                <p class="about-desc">
+                    Kadiyam Plants Gallery, located in <strong>Kadiapulanka, Kadiyam Mandal, Andhra Pradesh</strong>, is a trusted name in horticulture known for quality and excellence. With over 10 years of experience, we are one of the well-established nurseries in the Kadiyam region, widely recognized for rich greenery and plant diversity.
+                </p>
+                <div class="expertise-card anim-up">
+                    <h3>Our Specializations</h3>
+                    <ul class="expertise-list">
+                        <li><i class="fas fa-tree"></i> Avenue Canopy Trees & Shade Plants</li>
+                        <li><i class="fas fa-spa"></i> Topiary & Ficus Standard Crafts</li>
+                        <li><i class="fas fa-home"></i> Villa & Hotel Landscaping Projects</li>
+                        <li><i class="fas fa-globe"></i> Bulk Supply Across India</li>
+                    </ul>
+                </div>
+                <p class="about-quote">"We don't just grow plants — we grow trust, greenery, and happiness."</p>
+                <a href="contact.html" class="btn-about">Contact Us <i class="fas fa-arrow-right"></i></a>
+            </div>
         </div>
-        
-        <!-- Quick Links -->
-        <div class="footer-links-col">
-          <h3>Quick Links</h3>
-          <ul class="footer-links">
-            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
-            <li><a href="landscaping.html"><i class="fas fa-chevron-right"></i> Landscaping</a></li>
-            <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Media Gallery</a></li>
-            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
-          </ul>
-        </div>
-        
-        <!-- Plant Catalog Quick Links -->
-        <div class="footer-links-col">
-          <h3>Categories</h3>
-          <ul class="footer-links">
-            <li><a href="varieties.html?category=outdoor"><i class="fas fa-chevron-right"></i> Outdoor Plants</a></li>
-            <li><a href="varieties.html?category=flowering"><i class="fas fa-chevron-right"></i> Flowering Plants</a></li>
-            <li><a href="varieties.html?category=ficus"><i class="fas fa-chevron-right"></i> Ficus Plants</a></li>
-            <li><a href="varieties.html?category=fruit"><i class="fas fa-chevron-right"></i> Fruit Trees</a></li>
-            <li><a href="varieties.html?category=avenue"><i class="fas fa-chevron-right"></i> Avenue Trees</a></li>
-          </ul>
-        </div>
-        
-        <!-- Address & Contacts -->
-        <div class="footer-links-col">
-          <h3>Nursery Location</h3>
-          <ul class="footer-contact-info">
-            <li>
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Kadiapulanka, Kadiyam Mandal,<br>Andhra Pradesh, India</span>
-            </li>
-            <li>
-              <i class="fas fa-phone-alt"></i>
-              <a href="tel:7207755335">7207755335</a>
-            </li>
-            <li>
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:kadiyamplantsgallery@gmail.com">kadiyamplantsgallery@gmail.com</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p>&copy; 2026 Kadiyam Plants Gallery. All Rights Reserved.</p>
-        <p>Crafted for botanical excellence.</p>
-      </div>
     </div>
-  </footer>
+</section>
 
-  <!-- Vanilla Script File -->
-  <script src="script.js"></script>
+<!-- ===== A GLIMPSE OF OUR NURSERY (SPLIT IMAGE SECTION) ===== -->
+<section class="split-image section" id="splitImage">
+    <div class="container">
+        <div class="section-header anim-up">
+            <span class="section-label"><i class="fas fa-camera"></i> Our Nursery</span>
+            <h2 class="section-title">A Glimpse of Our Nursery</h2>
+            <p class="section-desc">Experience the Beauty and Scale of Kadiyam Plants Gallery</p>
+        </div>
+        <div class="split-container">
+            <div class="split-panel anim-split" style="--split-delay: 0s">
+                <img src="images/142.png" alt="A Glimpse of Our Nursery 1" loading="lazy">
+            </div>
+            <div class="split-panel anim-split" style="--split-delay: 0.3s">
+                <img src="images/141.png" alt="A Glimpse of Our Nursery 2" loading="lazy">
+            </div>
+            <div class="split-panel anim-split" style="--split-delay: 0.6s">
+                <img src="images/143.png" alt="A Glimpse of Our Nursery 3" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== COLLECTIONS PREVIEW ===== -->
+<section class="collections section" id="collections">
+    <div class="container">
+        <div class="section-header anim-up">
+            <span class="section-label"><i class="fas fa-leaf"></i> Our Collection</span>
+            <h2 class="section-title">Plant Varieties</h2>
+            <p class="section-desc">Explore our wide variety of beautifully nurtured plants</p>
+        </div>
+        <div class="collections-grid">
+            <div class="collection-card anim-up" style="--delay: 0.05s">
+                <div class="collection-img">
+                    <img src="images/88.png" alt="Outdoor Plants">
+                    <div class="collection-overlay">
+                        <a href="varieties.html?category=outdoor" class="collection-btn">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <h3>Outdoor Plants</h3>
+            </div>
+            <div class="collection-card anim-up" style="--delay: 0.1s">
+                <div class="collection-img">
+                    <img src="images/21.png" alt="Flowering Plants">
+                    <div class="collection-overlay">
+                        <a href="varieties.html?category=flowering" class="collection-btn">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <h3>Flowering Plants</h3>
+            </div>
+            <div class="collection-card anim-up" style="--delay: 0.15s">
+                <div class="collection-img">
+                    <img src="images/76.png" alt="Ficus Plants">
+                    <div class="collection-overlay">
+                        <a href="varieties.html?category=ficus" class="collection-btn">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <h3>Ficus Plants</h3>
+            </div>
+            <div class="collection-card anim-up" style="--delay: 0.2s">
+                <div class="collection-img">
+                    <img src="images/126.png" alt="Fruit Plants">
+                    <div class="collection-overlay">
+                        <a href="varieties.html?category=fruit" class="collection-btn">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <h3>Fruit Plants</h3>
+            </div>
+        </div>
+        <div class="collections-cta anim-up" style="--delay: 0.3s">
+            <a href="varieties.html" class="btn-primary btn-lg">View All Plants <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== GALLERY SECTION ===== -->
+<section class="section" id="gallery">
+    <div class="container">
+        <div class="section-header anim-up">
+            <span class="section-label"><i class="fas fa-images"></i> Gallery</span>
+            <h2 class="section-title">Our Gallery</h2>
+            <p class="section-desc">A visual journey through our nursery</p>
+        </div>
+        <div class="gallery-grid" id="galleryGrid">
+            <div class="gallery-item anim-up" style="--delay: 0.05s">
+                <img src="images/97.png" alt="Gallery 1" loading="lazy">
+            </div>
+            <div class="gallery-item anim-up" style="--delay: 0.1s">
+                <img src="images/98.png" alt="Gallery 2" loading="lazy">
+            </div>
+            <div class="gallery-item anim-up" style="--delay: 0.15s">
+                <img src="images/99.png" alt="Gallery 3" loading="lazy">
+            </div>
+            <div class="gallery-item anim-up" style="--delay: 0.2s">
+                <img src="images/100.png" alt="Gallery 4" loading="lazy">
+            </div>
+            <div class="gallery-item anim-up" style="--delay: 0.25s">
+                <img src="images/101.png" alt="Gallery 5" loading="lazy">
+            </div>
+            <div class="gallery-item anim-up" style="--delay: 0.3s">
+                <img src="images/102.png" alt="Gallery 6" loading="lazy">
+            </div>
+            <div class="gallery-item anim-up" style="--delay: 0.35s">
+                <img src="images/103.png" alt="Gallery 7" loading="lazy">
+            </div>
+            <div class="gallery-item anim-up" style="--delay: 0.4s">
+                <img src="images/104.png" alt="Gallery 8" loading="lazy">
+            </div>
+            <div class="gallery-item anim-up" style="--delay: 0.45s">
+                <img src="images/105.png" alt="Gallery 9" loading="lazy">
+            </div>
+            <div class="gallery-item anim-up" style="--delay: 0.5s">
+                <img src="images/106.png" alt="Gallery 10" loading="lazy">
+            </div>
+            <div class="gallery-item anim-up" style="--delay: 0.55s">
+                <img src="images/107.png" alt="Gallery 11" loading="lazy">
+            </div>
+            <div class="gallery-item anim-up" style="--delay: 0.6s">
+                <img src="images/108.png" alt="Gallery 12" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== VIDEO SECTION (WATCH OUR NURSERY - ALL 9 VIDEOS) ===== -->
+<section class="videos-section section" id="videos">
+    <div class="container">
+        <div class="section-header anim-up">
+            <span class="section-label"><i class="fas fa-video"></i> Videos</span>
+            <h2 class="section-title">Watch Our Nursery</h2>
+            <p class="section-desc">See our plants and landscape work in action</p>
+        </div>
+        <div class="videos-grid">
+            <!-- Video 1 -->
+            <div class="video-card anim-up" style="--delay: 0.05s">
+                <video preload="metadata" poster="images/140.png" loop muted playsinline>
+                    <source src="v1.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"><div class="play-btn-circle"><i class="fas fa-play"></i></div></div>
+            </div>
+            <!-- Video 2 -->
+            <div class="video-card anim-up" style="--delay: 0.1s">
+                <video preload="metadata" poster="images/121.png" loop muted playsinline>
+                    <source src="v2.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"><div class="play-btn-circle"><i class="fas fa-play"></i></div></div>
+            </div>
+            <!-- Video 3 -->
+            <div class="video-card anim-up" style="--delay: 0.15s">
+                <video preload="metadata" poster="images/122.png" loop muted playsinline>
+                    <source src="v3.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"><div class="play-btn-circle"><i class="fas fa-play"></i></div></div>
+            </div>
+            <!-- Video 4 -->
+            <div class="video-card anim-up" style="--delay: 0.2s">
+                <video preload="metadata" poster="images/123.png" loop muted playsinline>
+                    <source src="v4.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"><div class="play-btn-circle"><i class="fas fa-play"></i></div></div>
+            </div>
+            <!-- Video 5 -->
+            <div class="video-card anim-up" style="--delay: 0.25s">
+                <video preload="metadata" poster="images/125.png" loop muted playsinline>
+                    <source src="v5.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"><div class="play-btn-circle"><i class="fas fa-play"></i></div></div>
+            </div>
+            <!-- Video 6 -->
+            <div class="video-card anim-up" style="--delay: 0.3s">
+                <video preload="metadata" poster="images/127.png" loop muted playsinline>
+                    <source src="v6.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"><div class="play-btn-circle"><i class="fas fa-play"></i></div></div>
+            </div>
+            <!-- Video 7 -->
+            <div class="video-card anim-up" style="--delay: 0.35s">
+                <video preload="metadata" poster="images/128.png" loop muted playsinline>
+                    <source src="v7.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"><div class="play-btn-circle"><i class="fas fa-play"></i></div></div>
+            </div>
+            <!-- Video 8 -->
+            <div class="video-card anim-up" style="--delay: 0.4s">
+                <video preload="metadata" poster="images/129.png" loop muted playsinline>
+                    <source src="v8.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"><div class="play-btn-circle"><i class="fas fa-play"></i></div></div>
+            </div>
+            <!-- Video 9 -->
+            <div class="video-card anim-up" style="--delay: 0.45s">
+                <video preload="metadata" poster="images/130.png" loop muted playsinline>
+                    <source src="v9.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"><div class="play-btn-circle"><i class="fas fa-play"></i></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== LANDSCAPE WORKS ===== -->
+<section class="section" id="landscape">
+    <div class="container">
+        <div class="section-header anim-up">
+            <span class="section-label"><i class="fas fa-drafting-compass"></i> Our Work</span>
+            <h2 class="section-title">Landscaping Works</h2>
+            <p class="section-desc">Beautiful landscape projects crafted by our expert team</p>
+        </div>
+        <div class="landscape-layout">
+            <div class="landscape-card large anim-left">
+                <img src="images/128.png" alt="Featured Landscape">
+                <div class="landscape-overlay"><span>View Project</span></div>
+            </div>
+            <div class="landscape-grid-right anim-right">
+                <div class="landscape-card">
+                    <img src="images/129.png" alt="Landscape Work">
+                    <div class="landscape-overlay"><span>View Project</span></div>
+                </div>
+                <div class="landscape-card">
+                    <img src="images/130.png" alt="Landscape Work">
+                    <div class="landscape-overlay"><span>View Project</span></div>
+                </div>
+                <div class="landscape-card">
+                    <img src="images/131.png" alt="Landscape Work">
+                    <div class="landscape-overlay"><span>View Project</span></div>
+                </div>
+                <div class="landscape-card">
+                    <img src="images/132.png" alt="Landscape Work">
+                    <div class="landscape-overlay"><span>View Project</span></div>
+                </div>
+                <div class="landscape-card">
+                    <img src="images/133.png" alt="Landscape Work">
+                    <div class="landscape-overlay"><span>View Project</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section class="section section-alt" id="contact">
+    <div class="container">
+        <div class="section-header anim-up">
+            <span class="section-label"><i class="fas fa-envelope"></i> Get In Touch</span>
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-desc">We'd love to hear from you</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-map anim-left">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15264.44498305018!2d81.86877967885449!3d16.92080345091729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37a13d710f63b5%3A0xe543dfa7eb20c15d!2sKadiapulanka%2C%20Andhra%20Pradesh%20533126!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="contact-info anim-right">
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Our Address</h4>
+                            <p>Kadiapulanka, Kadiyam Mandal<br>Andhra Pradesh, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:kadiyamplantsgallery@gmail.com">kadiyamplantsgallery@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p><a href="tel:+917207755335">+91 7207755335</a></p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required id="formName">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required id="formEmail">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Mobile Number" required id="formMobile">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="4" required id="formMessage"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="footer-curve"></div>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Logo" class="footer-logo-img">
+                    <h3>Kadiyam Plants Gallery</h3>
+                </div>
+                <p class="footer-desc">Your trusted partner in greenery. Cultivating native and ornamental beauty for over 10 years in Kadiyam, Andhra Pradesh.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="footer-contact-list">
+                    <li><i class="fas fa-map-marker-alt"></i> Kadiapulanka, Kadiyam Mandal, AP</li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:kadiyamplantsgallery@gmail.com">kadiyamplantsgallery@gmail.com</a></li>
+                    <li><i class="fas fa-phone-alt"></i> <a href="tel:+917207755335">+91 7207755335</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="varieties.html">Varieties</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="landscaping.html">Landscaping Works</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <div class="footer-social">
+                    <a href="https://wa.me/917207755335" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/kadiyam_plants_gallery?igsh=MWoxNXk2am1xbWY4YQ==" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="tel:+917207755335" class="social-icon"><i class="fas fa-phone-alt"></i></a>
+                </div>
+                <p class="footer-cta">Open for orders & landscaping consultations. Reach out today!</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kadiyam Plants Gallery. All Rights Reserved.</p>
+            <p>Designed with <i class="fas fa-leaf" style="color: #4ade80;"></i> care</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close"><i class="fas fa-times"></i></button>
+    <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+    <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+    <div class="lightbox-content">
+        <img src="" alt="" id="lightboxImg">
+    </div>
+</div>
+
+<!-- Floating Buttons -->
+<a href="https://wa.me/917207755335" target="_blank" class="floating-btn floating-whatsapp"><i class="fab fa-whatsapp"></i></a>
+<a href="tel:+917207755335" class="floating-btn floating-call"><i class="fas fa-phone-alt"></i></a>
+
+<script src="script.js"></script>
 </body>
 </html>

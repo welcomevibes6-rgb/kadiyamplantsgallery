@@ -330,17 +330,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // ===== FORMS SUBMISSION =====
+    // ===== WHATSAPP CONSTANT & FORMS SUBMISSION =====
+    const DEFAULT_WA_MESSAGE = "🌿 Hello Kadiyam Plants Gallery! I visited your website and I'm interested in your plants and landscaping services. Please share more details. Thank you!";
+    const WA_URL = "https://wa.me/917207755335?text=" + encodeURIComponent(DEFAULT_WA_MESSAGE);
+
+    // Intercept any telephone links to open WhatsApp conversation
+    document.addEventListener('click', e => {
+        const phoneLink = e.target.closest('a[href^="tel:"]');
+        if (phoneLink) {
+            e.preventDefault();
+            window.open(WA_URL, '_blank');
+        }
+    });
+
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', e => {
             e.preventDefault();
-            const name = document.getElementById('formName') ? document.getElementById('formName').value : '';
-            const email = document.getElementById('formEmail') ? document.getElementById('formEmail').value : '';
-            const mobile = document.getElementById('formMobile') ? document.getElementById('formMobile').value : '';
-            const message = document.getElementById('formMessage') ? document.getElementById('formMessage').value : '';
-            const text = encodeURIComponent(`Hello Kadiyam Plants Gallery!\n\nName: ${name}\nEmail: ${email}\nMobile: ${mobile}\nMessage: ${message}`);
-            window.open(`https://wa.me/917207755335?text=${text}`, '_blank');
+            window.open(WA_URL, '_blank');
             contactForm.reset();
         });
     }
@@ -349,13 +356,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (enquiryForm) {
         enquiryForm.addEventListener('submit', e => {
             e.preventDefault();
-            const name = document.getElementById('formName') ? document.getElementById('formName').value : '';
-            const phone = document.getElementById('formPhone') ? document.getElementById('formPhone').value : '';
-            const email = document.getElementById('formEmail') ? document.getElementById('formEmail').value : '';
-            const topic = document.getElementById('formSubject') ? document.getElementById('formSubject').value : '';
-            const message = document.getElementById('formMessage') ? document.getElementById('formMessage').value : '';
-            const text = encodeURIComponent(`Hello Kadiyam Plants Gallery!\n\nEnquiry Topic: ${topic}\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nRequirement: ${message}`);
-            window.open(`https://wa.me/917207755335?text=${text}`, '_blank');
+            window.open(WA_URL, '_blank');
             enquiryForm.reset();
         });
     }

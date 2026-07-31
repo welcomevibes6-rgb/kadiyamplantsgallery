@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ===== WHATSAPP CONSTANT & FORMS SUBMISSION =====
-    const DEFAULT_WA_MESSAGE = "\uD83C\uDF3F Hello Kadiyam Plants Gallery! I visited your website and I'm interested in your plants and landscaping services. Please share more details. Thank you!";
+    const DEFAULT_WA_MESSAGE = "🌱 🌱Hello Kadiyam Plants Gallery! I visited your website and I'm interested in your plants and landscaping services. Please share more details. Thank you!💐💐";
     const WA_URL = "https://wa.me/917207755335?text=" + encodeURIComponent(DEFAULT_WA_MESSAGE);
 
     // Intercept any telephone links to open WhatsApp conversation
